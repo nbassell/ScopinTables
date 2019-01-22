@@ -23,11 +23,18 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "./node_modules/.bin/webpack --mode=production",
+    "start": "./node_modules/.bin/webpack --mode=production",
+    "webpack": "webpack --mode=development --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nbassell/ScopinTables.git"
+  },
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.5.0"
   },
   "keywords": [],
   "author": "",
