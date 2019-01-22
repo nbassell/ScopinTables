@@ -6,11 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
-bundle.js
-bundle.js.map
-node_modules/s
-Gemfile.lock
-package-lock.json
+bundle.js*
 
 # Ignore all logfiles and tempfiles.
 /log/*
