@@ -1,0 +1,1 @@
+json.extract! user, :id, :email, :f_name, :l_name, :primary_dining_location
