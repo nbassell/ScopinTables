@@ -8,9 +8,10 @@ import {
 import Greeting from './greeting';
 
 const mapStateToProps = state => {
+  debugger
   return {
     loggedIn: Boolean(state.session.currentUser),
-    currentUser: state.entities.users[state.session.currentUser],
+    currentUser: state.session.currentUser,
   };
 };
 

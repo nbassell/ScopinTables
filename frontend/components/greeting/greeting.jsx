@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Greeting = ({ currentUser, logout, login }) => {
+const Greeting = ({ currentUser, logout, history }) => {
   const sessionLinks = () => {
     return (
-      <nav className="login-signup">
+      <nav className="nav-btn-container">
         <Link to='/login'>Sign in</Link>
-        &nbsp;or&nbsp;
+        &nbsp;&nbsp;
         <Link to='/signup'>Sign up</Link>
+        &nbsp;&nbsp;
+        <Link to='/login'>Demo</Link>
       </nav>
     );
   };
@@ -16,16 +18,16 @@ const Greeting = ({ currentUser, logout, login }) => {
     logout().then(() => history.push('/'));
   };
 
-  
-
   const personalGreeting = () => {
-    return (
-      <div>
-        <button className="nav-button signup">Sign up</button>
-        <button className="nav-button signin">Sign in</button>
-        <button className="nav-button demo">Demo</button>
-      </div>
-    );
+    return <div className="btn navbar-logout">
+        <a className="btn dropdown-toggle" href="#" data-toggle="dropdown">
+          Hi, {currentUser.f_name}
+          <span className="dropdown-icon">
+            <i className="fas fa-chevron-circle-down" />
+          </span>
+        </a>
+        <button onClick={handleLogout}>Sign out</button>
+      </div>;
   }
 
   return currentUser ? personalGreeting() : sessionLinks();

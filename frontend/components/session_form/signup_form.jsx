@@ -26,7 +26,8 @@ class SignupForm extends React.Component {
     if (this.state.password != this.state.passwordConfirmation) {
       this.props.receiveSessionErrors( ["Passwords must match"] );
     } else {
-      const user = merge({}, this.state);
+      const { email, f_name, l_name, password, primary_dining_location } = this.state;
+      const user = merge({}, { email, f_name, l_name, password, primary_dining_location });
       this.props.signup(user).then(() => this.props.history.push('/'));
     }
   }
@@ -98,15 +99,12 @@ class SignupForm extends React.Component {
             />
             <br />
             <input className="signup-submit" type="submit" value="Create Account"></input>
+            
           </div>
         </form>
       </div>
     );
   }
-
-
-
-
 }
 
 export default SignupForm;
