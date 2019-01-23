@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore();
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.login = SessionApiUtils.login;
-  window.logout = SessionApiUtils.logout;
-  window.signup = SessionApiUtils.signup;
+  // window.login = SessionApiUtils.login;
+  // window.logout = SessionApiUtils.logout;
+  // window.signup = SessionApiUtils.signup;
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
