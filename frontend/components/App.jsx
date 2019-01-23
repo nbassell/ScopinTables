@@ -9,6 +9,7 @@ import {
 import LoginFormContainer from "./session_form/login_form_container";
 import SignupFormContainer from "./session_form/signup_form_container";
 import { AuthRoute } from '../util/route_util';
+import Modal from './modal/modal_container';
 
 
 const App = () => (

@@ -28,7 +28,7 @@ class SignupForm extends React.Component {
     } else {
       const { email, f_name, l_name, password, primary_dining_location } = this.state;
       const user = merge({}, { email, f_name, l_name, password, primary_dining_location });
-      this.props.signup(user).then(() => this.props.history.push('/'));
+      this.props.signup(user).then(this.props.closeModal);
     }
   }
 
