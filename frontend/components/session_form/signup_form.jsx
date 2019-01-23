@@ -10,7 +10,7 @@ class SignupForm extends React.Component {
       l_name: '',
       password: '',
       passwordConfirmation: '',
-      primaryDiningLocation: '',
+      primary_dining_location: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -92,9 +92,9 @@ class SignupForm extends React.Component {
             <input
               className="signup-input"
               type="text"
-              value={this.state.primaryDiningLocation}
+              value={this.state.primary_dining_location}
               placeholder="Primary Dining Location *"
-              onChange={this.update('primaryDiningLocation')}
+              onChange={this.update('primary_dining_location')}
             />
             <br />
             <input className="signup-submit" type="submit" value="Create Account"></input>
