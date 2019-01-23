@@ -2,9 +2,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 //Components
-// import Root from './components/root';
+import Root from './components/root';
 import configureStore from './store/store';
-import * as SessionApiUtils from './util/session_api_util';
+// import * as SessionApiUtils from './util/session_api_util';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -29,5 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
   window.signup = SessionApiUtils.signup;
 
   const root = document.getElementById('root');
-  ReactDOM.render(<h1>Welcome to Scopin' Tables!</h1>, root);
+  ReactDOM.render(<Root store={store} />, root);
 }); 
