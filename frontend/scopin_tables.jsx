@@ -27,5 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
   window.signup = SessionApiUtils.signup;
 
   const root = document.getElementById('root');
-  ReactDOM.render(<h1>Sup fam</h1>, root);
-});
+  ReactDOM.render(<h1>Welcome to Scopin' Tables!</h1>, root);
+}); 
