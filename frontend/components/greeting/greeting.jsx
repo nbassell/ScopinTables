@@ -7,9 +7,9 @@ const Greeting = ({ currentUser, logout, history, openModal }) => {
       <nav className="nav-btn-container">
         <button onClick={() => openModal('login')}>Sign in</button>
         &nbsp;&nbsp;
-        <Link to='/signup'>Sign up</Link>
+        <button onClick={() => openModal('signup')}>Sign up</button>
         &nbsp;&nbsp;
-        <Link to='/login'>Demo</Link>
+        {/* <button onClick={() => login(guest)}>Demo</button> */}
       </nav>
     );
   };

@@ -5,6 +5,15 @@
       user: current_user
     ).html_safe %>
   </script>
+  
+  <script type="text/javascript">
+    $(document).keydown(function(event) { 
+      if (event.keyCode == 27) { 
+        $('#modal_id').hide();
+      }
+    });
+</script>
+
 <% end %>
 
 <main id="root"></main>

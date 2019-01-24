@@ -20,7 +20,7 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = merge({}, this.state);
-    this.props.login(user).then(() => this.props.history.push('/'));
+    this.props.login(user).then(this.props.closeModal);
   }
 
   renderErrors() {
