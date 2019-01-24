@@ -1,6 +1,6 @@
 import React from 'react';
 
-import GreetingContainer from './greeting/greeting_container';
+import Navbar from './navbar/navbar';
 import {
   Route,
   Switch,
@@ -15,12 +15,7 @@ import Modal from './modal/modal_container';
 const App = () => (
   <div>
     <Modal />
-    <header>
-      <Link to="/" className="header-link">
-        <h1>Scopin Tables</h1>
-      </Link>
-      <GreetingContainer />
-    </header>
+    <Navbar />
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />

@@ -4,7 +4,6 @@ import SignupFormContainer from "../session_form/signup_form_container";
 
 export default ({ modal, closeModal }) => {
   if (!modal) {
-    debugger
     return null;
   }
   let component;

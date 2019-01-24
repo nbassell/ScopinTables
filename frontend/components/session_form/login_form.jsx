@@ -45,7 +45,7 @@ class LoginForm extends React.Component {
               className="signup-input"
               type="email"
               value={this.state.email}
-              placeholder="Enter email *"
+              placeholder="Email"
               onChange={this.update('email')}
             />
             <br />
@@ -53,7 +53,7 @@ class LoginForm extends React.Component {
               className="signup-input"
               type="password"
               value={this.state.password}
-              placeholder="Enter password *"
+              placeholder="Password"
               onChange={this.update('password')}
             />
             <br />

@@ -1,17 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
+
 const Greeting = ({ currentUser, logout, history, openModal }) => {
   const sessionLinks = () => {
-    return (
-      <nav className="nav-btn-container">
-        <button onClick={() => openModal('login')}>Sign in</button>
+    return <nav className="right-nav">
+        <button className="btn btn-signup" onClick={() => openModal("signup")}>
+          Sign up
+        </button>
         &nbsp;&nbsp;
-        <button onClick={() => openModal('signup')}>Sign up</button>
+        <button className="btn btn-signin" onClick={() => openModal("login")}>
+          Sign in
+        </button>
         &nbsp;&nbsp;
         {/* <button onClick={() => login(guest)}>Demo</button> */}
-      </nav>
-    );
+      </nav>;
   };
 
   const handleLogout = () => {
@@ -19,7 +23,7 @@ const Greeting = ({ currentUser, logout, history, openModal }) => {
   };
 
   const personalGreeting = () => {
-    return <div className="btn navbar-logout">
+    return <div className="right-nav">
         <a className="btn dropdown-toggle" href="#" data-toggle="dropdown">
           Hi, {currentUser.f_name}
           <span className="dropdown-icon">
@@ -30,7 +34,14 @@ const Greeting = ({ currentUser, logout, history, openModal }) => {
       </div>;
   }
 
-  return currentUser ? personalGreeting() : sessionLinks();
+
+  return (
+    <nav className="navbar-container">
+      {
+        currentUser ? personalGreeting() : sessionLinks()
+      }
+    </nav>
+  )
 }
 
 export default Greeting;

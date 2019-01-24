@@ -9,3 +9,24 @@ header, nav, section, ul, ol, li {
   text-decoration: none;
   color: inherit;
 }
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#root {
+  background: #f7f7f7;
+}
