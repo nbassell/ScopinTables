@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
       <div className="nav-container">
         <a className="nav-left" href="#/">
-          <img src="/assets/scopin_logo.png" className="logo-img" alt="scopin-tables-logo" />
+          <img src={window.logoURL} className="logo-img" alt="scopin-tables-logo" />
           <h1 className="logo-text">Scopin'Tables</h1>
         </a>
         <GreetingContainer />
