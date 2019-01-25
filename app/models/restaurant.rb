@@ -35,7 +35,7 @@ class Restaurant < ApplicationRecord
       term: "%#{search_term}%"
     )
   end
-
+  
   # def opening_time_before_closing_time
   #   unless opening_time && closing_time && opening_time < closing_time
   #     errors[:opening] << "time must be before closing time."
