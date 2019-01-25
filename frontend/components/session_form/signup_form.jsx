@@ -88,7 +88,7 @@ class SignupForm extends React.Component {
               onChange={this.update('passwordConfirmation')}
             />
           <select name="Location" className='btn form-input location-dropdown' onChange={this.update('primary_dining_location')}>
-            <option value="Location" disabled defaultValue>Primary Dining Location *</option>
+            <option value="Location" disabled selected>Primary Dining Location *</option>
             <option value="NYC">NYC</option>
             <option value="San Francisco">San Francisco</option>
             <option value="Miami">Miami</option>
