@@ -34,9 +34,9 @@ class SignupForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="errors-list">
         {this.props.errors.map((error, idx) => (
-          <li key={`error-${idx}`}>
+          <li className="error" key={`error-${idx}`}>
             {error}
           </li>
         ))}
@@ -47,10 +47,11 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className="session">
+        <div className="session-header">
+          <h1>Welcome to Scopin'Tables!</h1>
+        </div>
         <form className="session-form" onSubmit={this.handleSubmit}>
-        <h1>Welcome to Scopin'Tables!</h1>
           {this.renderErrors()}
-          <div className="form-wrapper">
             <input
               className="form-input"
               type="text"
@@ -86,17 +87,31 @@ class SignupForm extends React.Component {
               placeholder="Re-enter password *"
               onChange={this.update('passwordConfirmation')}
             />
-            <input
-              className="form-input"
-              type="text"
-              value={this.state.primary_dining_location}
-              placeholder="Primary Dining Location *"
-              onChange={this.update('primary_dining_location')}
-            />
+          <select name="Location" className='btn form-input location-dropdown' onChange={this.update('primary_dining_location')}>
+            <option value="Location" disabled defaultValue>Primary Dining Location *</option>
+            <option value="NYC">NYC</option>
+            <option value="San Francisco">San Francisco</option>
+            <option value="Miami">Miami</option>
+          </select>
             <button className="btn btn-session-submit">Create Account</button>
-            
-          </div>
         </form>
+
+        <div className="no-form">
+          <p>Don't want to complete the form?</p>
+        </div>
+        <div className="social-session">
+          <a href="https://www.facebook.com/" className="facebook-google-btn">
+            <i className="fab fa-facebook-f" />Continue with Facebook
+          </a>
+          <a href="https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2F%3Fgws_rd%3Dssl&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+            className="facebook-google-btn"><i className="fab fa-google"></i>Continue with Google
+          </a>
+        </div>
+
+        <div className="eula">
+          <p>Selecting "Create Account" you are agreeing to the terms and conditions of the Scopin'Tables User Agreement and Privacy Policy.</p>
+        </div>
+
       </div>
     );
   }

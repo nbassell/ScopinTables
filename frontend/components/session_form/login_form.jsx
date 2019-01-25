@@ -1,6 +1,5 @@
 import React from "react";
 import merge from "lodash/merge";
-import SignupFormContainer from "./signup_form_container";
 
 
 class LoginForm extends React.Component {
@@ -28,9 +27,9 @@ class LoginForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="error-list">
         {this.props.errors.map((error, idx) => (
-          <li key={`error-${idx}`}>
+          <li className="error" key={`error-${idx}`}>
             {error}
           </li>
         ))}
@@ -66,10 +65,9 @@ class LoginForm extends React.Component {
 
         <div className="swap-session">
           <p className="new-user-text">New to Scopin'Tables?</p>
-          <button className="btn-ref-signup"
-                  onClick={
-                    () => openModal("signup")
-                    }>          
+          <button className="btn btn-ref-signup"
+                  onClick={this.props.openModal}
+          >          
             Create an account
           </button>
         </div>
