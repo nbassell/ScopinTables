@@ -1,5 +1,7 @@
 import React from "react";
 import merge from "lodash/merge";
+import SignupFormContainer from "./signup_form_container";
+
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -9,6 +11,7 @@ class LoginForm extends React.Component {
       password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   update(field) {
@@ -38,30 +41,41 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className="session">
-        <form className="session-form" onSubmit={this.handleSubmit}>
+        <div className="session-header">
           <h1>Please sign in</h1>
+        </div>
+        <form className="session-form" onSubmit={this.handleSubmit}>
           {this.renderErrors()}
-          <div className="form-wrapper">
-            <input
-              className="form-input"
-              type="text"
-              value={this.state.email}
-              placeholder="Email"
-              onChange={this.update('email')}
-            />
-            <input
-              className="form-input"
-              type="password"
-              value={this.state.password}
-              placeholder="Password"
-              onChange={this.update('password')}
-            />
-            <button className="btn btn-session-submit">Sign in</button>
-          </div>
+          <input className="form-input" type="text" value={this.state.email}
+                placeholder="Email" onChange={this.update("email")}/>
+          <input className="form-input" type="password" value={this.state.password}
+                placeholder="Password" onChange={this.update("password")} />
+          <button className="btn btn-session-submit">Sign In</button>
         </form>
+        <div className="no-form">
+          <p>Don't want to complete the form?</p>
+        </div>
+        <div className="social-session">
+          <a href="https://www.facebook.com/" className="facebook-google-btn">
+            <i className="fab fa-facebook-f" />Continue with Facebook
+          </a>
+          <a href="https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2F%3Fgws_rd%3Dssl&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+            className="facebook-google-btn"><i className="fab fa-google"></i>Continue with Google
+          </a>
+        </div>
+
+        <div className="swap-session">
+          <p className="new-user-text">New to Scopin'Tables?</p>
+          <button className="btn-ref-signup"
+                  onClick={
+                    () => openModal("signup")
+                    }>          
+            Create an account
+          </button>
+        </div>
+
       </div>
-    );
+    )
   }
 }
-
 export default LoginForm;
