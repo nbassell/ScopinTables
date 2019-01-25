@@ -1,10 +1,37 @@
-.navbar-container {
+.nav-container {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 0 36px 0 0;
+  border-bottom: 1px solid black;
+  min-width: 420px;
+  height: 54px;
 }
 
-.right-nav {
+.nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 11rem;
+  font-size: 20px;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.logo-img {
+  display: flex;
+  height: 40px;
+  width: 40px;
+}
+
+.logo-text {
+  text-shadow: 0.5px 0;
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+
+.nav-right {
   display: flex;
   align-items: center;
   margin-left: 15px;
@@ -16,6 +43,7 @@
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   text-align: center;
   text-decoration: none;
+  line-height: 2rem;
   border-style: solid;
   border-width: 0;
   transition: background-color 300ms ease-out;
@@ -25,10 +53,8 @@
   background-color: #237b98;
   border-color: #1c627a;
   color: #fff;
-  margin: .6875rem 0 0;
-  font-size: .875rem;
-  line-height: 2rem;
-  padding: 0 1rem;
+  font-size: 14px;
+  padding: 0 16px;
   border-radius: 3px;
 }
 
@@ -39,7 +65,6 @@
   position: relative;
   display: block;
   padding: 0 1rem;
-  line-height: 3.375rem;
   font-size: 100%;
 }
 
@@ -48,10 +73,11 @@
   outline: 0;
 }
 
+.btn-signup:hover {
+  background-color: #1c627a
+}
+
 button:focus {
   outline: none;
 }
 
-.btn-signup:hover {
-  background-color: #1c627a
-}

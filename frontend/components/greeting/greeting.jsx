@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Greeting = ({ currentUser, logout, history, openModal }) => {
   const sessionLinks = () => {
-    return <nav className="right-nav">
+    return <nav className="nav-right">
         <button className="btn btn-signup" onClick={() => openModal("signup")}>
           Sign up
         </button>
@@ -23,7 +23,7 @@ const Greeting = ({ currentUser, logout, history, openModal }) => {
   };
 
   const personalGreeting = () => {
-    return <div className="right-nav">
+    return <div className="nav-right">
         <a className="btn dropdown-toggle" href="#" data-toggle="dropdown">
           Hi, {currentUser.f_name}
           <span className="dropdown-icon">
@@ -36,7 +36,7 @@ const Greeting = ({ currentUser, logout, history, openModal }) => {
 
 
   return (
-    <nav className="navbar-container">
+    <nav>
       {
         currentUser ? personalGreeting() : sessionLinks()
       }

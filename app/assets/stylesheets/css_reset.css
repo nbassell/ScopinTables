@@ -20,6 +20,9 @@ input[type="password"],
 input[type="email"],
 input[type="text"],
 input[type="submit"],
+input[type="date"],
+input[type="time"],
+select,
 textarea,
 button {
   -webkit-appearance: none;
@@ -27,6 +30,3 @@ button {
   appearance: none;
 }
 
-#root {
-  background: #f7f7f7;
-}
