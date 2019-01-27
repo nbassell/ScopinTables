@@ -1,0 +1,1 @@
+json.extract! @restaurant, :id, :name, :address, :city, :state, :zipcode, :price, :description
