@@ -1,7 +1,7 @@
 .nav-container {
   display: flex;
   justify-content: space-between;
-  padding: 0 36px 0 0;
+  padding: 0 11px 0 0;
   border-bottom: 1px solid black;
   min-width: 420px;
   height: 54px;
@@ -19,6 +19,13 @@
   margin-left: 20px;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px 10px;
+}
+
 .logo-img {
   display: flex;
   height: 40px;
@@ -29,14 +36,6 @@
   text-shadow: 0.5px 0;
   letter-spacing: 1px;
   font-weight: 600;
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  margin-left: 15px;
-  position: relative;
-  padding: 10px 10px;
 }
 
 .btn {

@@ -16,6 +16,9 @@ const App = () => (
   <div>
     <Modal />
     <Navbar />
+    <div className="test">
+      <p>Find your table for any occasion</p>
+    </div>
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
