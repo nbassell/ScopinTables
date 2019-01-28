@@ -3,7 +3,7 @@
 }
 
 .show-page-bg-image {
-  background-image: url("https://s3.amazonaws.com/scopin-tables-splash/restaurant_bg.jpg");
+  background-image: url("https://s3.amazonaws.com/scopin-tables-dev-aa/restaurant_bg.jpg");
   background-repeat:no-repeat;
   background-position: center;
   background-size: cover;
