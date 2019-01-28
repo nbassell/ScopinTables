@@ -1,9 +1,9 @@
 json.set! :restaurants do
-  @restaurantts.each do |restaurant|
+  @restaurants.each do |restaurant|
     json.set! restaurant.id do
       json.extract! restaurant, :name, :price, :description
-      res_array = []
-      
+      restaurant_array = []
+
     end
   end
 end

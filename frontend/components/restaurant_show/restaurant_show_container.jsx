@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchRestaurant, fetchRestaurants } from '../../actions/restaurant_actions';
+import { fetchRestaurant } from '../../actions/restaurant_actions';
 import RestaurantShow from "./restaurant_show";
 
 const mapStateToProps = (oldState, ownProps) => {
@@ -14,7 +14,6 @@ const mapStateToProps = (oldState, ownProps) => {
 const mapDispatchToProps = dispatch => {
   return ({
     fetchRestaurant: (id) => dispatch(fetchRestaurant(id)),
-    fetchRestaurantz: (id) => dispatch(fetchRestaurants(id)),
   });
 };
 
