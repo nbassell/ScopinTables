@@ -11,7 +11,7 @@ class CreateRestaurants < ActiveRecord::Migration[5.2]
       t.integer :capacity, null: false
       t.time :opening_time, null: false
       t.time :closing_time, null: false
-      t.text :description
+      t.text :description,
       t.timestamps
     end
     add_index :restaurants, :name, unique: true
