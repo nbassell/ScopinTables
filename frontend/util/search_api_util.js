@@ -1,4 +1,4 @@
-export const searchRestaurants = (query) => {
+export default searchRestaurants = (query) => {
   return $.ajax({
     method: 'GET',
     url: '/api/restaurant/search',

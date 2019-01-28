@@ -20,23 +20,20 @@ export const receiveRestaurants = restaurants => {
 };
 
 export const fetchRestaurants = () => dispatch => {
-    return APIUtil.fetchRestaurants().then(
-      payload => dispatch(receiveRestaurants(payload)));
-  };
+  return APIUtil.fetchRestaurants().then(
+    payload => dispatch(receiveRestaurants(payload)));
 };
 
 export const fetchRestaurant = (id) => dispatch => {
-    return APIUtil.fetchRestaurant(id).then(
-      restaurant => dispatch(receiveRestaurant(restaurant))
-    );
-  };
+  return APIUtil.fetchRestaurant(id).then(
+    restaurant => dispatch(receiveRestaurant(restaurant))
+  );
 };
 
 export const searchRestaurants = (query) => dispatch => {
-    return SearchUtil.searchRestaurants(query).then(
-      payload => {
-        dispatch(receiveRestaurants(payload));
-      }
-    );
-  };
+  return SearchUtil.searchRestaurants(query).then(
+    payload => {
+      dispatch(receiveRestaurants(payload));
+    }
+  );
 };

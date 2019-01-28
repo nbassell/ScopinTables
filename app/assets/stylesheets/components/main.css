@@ -1,4 +1,4 @@
-.test {
+.main {
   background-image: linear-gradient(rgb(47, 45, 65, 0.7), rgb(47, 45, 65, 0.7)),
     url("https://s3.amazonaws.com/scopin-tables-splash/splash.jpg");
   background-repeat:no-repeat;
@@ -14,7 +14,7 @@
   color: #333;
 }
 
-.test p {
+.main p {
   /* position: relative;
   box-sizing: border-box; */
   display: block;
