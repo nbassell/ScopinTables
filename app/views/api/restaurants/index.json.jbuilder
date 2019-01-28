@@ -1,7 +1,7 @@
-@restaurants.each do |restaurant|
-  json.set! restaurant.id do
-    json.partial! 'api/restaurants/restaurant', restaurant: restaurant
+json.restaurants do
+  @restaurants.each do |restaurant|
+    json.set! restaurant.id do
+      json.extract! restaurant, :name, price, description
+    end
   end
 end
-
-json.restaurant_ids @restaurants.map(&:id)

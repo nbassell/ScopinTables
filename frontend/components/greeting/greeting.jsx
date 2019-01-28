@@ -9,6 +9,7 @@ class Greeting extends React.Component {
                    
     this.reveal = this.reveal.bind(this);
     this.close = this.close.bind(this);
+    this.handleLogout = this.handleLogout.bind(this);
   }
   
   reveal() {
@@ -22,11 +23,10 @@ class Greeting extends React.Component {
   }
 
   handleLogout() {
-    logout().then(() => history.push('/'));
+    this.props.logout().then(() => this.props.history.push('/'));
   }
 
   render() {
-    // debugger
     const sessionLinks = (
       <div>
         <button className="btn btn-signup" onClick={() => this.props.openModal("signup")}>
@@ -44,8 +44,8 @@ class Greeting extends React.Component {
     const personalGreeting = (
       <div>
         <div className="dropdown">
-          <button className="btn-dropdown">Hi, {this.props.currentUser ? this.props.currentUser.f_name : null}</button>
-          <a href="#">Link 1</a>
+          <button className="btn-dropdown" onClick={this.handleLogout}>Hi, {this.props.currentUser ? this.props.currentUser.f_name : null}</button>
+          <a href="#">Sign out</a>
           <span className="dropdown-icon">
             <i className="fas fa-chevron-down"></i>
           </span>
@@ -61,41 +61,3 @@ class Greeting extends React.Component {
   }
 }   
 export default Greeting;
-    // return (
-    //     const Greeting = ({ currentUser, logout, history, openModal }) => {
-    //       const sessionLinks = () => {
-    //         return <nav className="nav-right">
-    //           <button className="btn btn-signup" onClick={() => openModal("signup")}>
-    //             Sign up
-    //           </button>
-    //           &nbsp;&nbsp;
-    //           <button className="btn btn-signin" onClick={() => openModal("login")}>
-    //             Sign in
-    //           </button>
-    //           &nbsp;&nbsp;
-    //           {/* <button onClick={() => login(guest)}>Demo</button> */}
-    //         </nav>;
-    //     };
-        
-    //     const personalGreeting = () => {
-    //       return <div className="nav-right">
-    //               <div className="dropdown">
-    //                 <button className="btn-dropdown">Hi, {currentUser.f_name}</button>
-    //                 <a href="#">Link 1</a>
-    //                 <span className="dropdown-icon">
-    //                   <i className="fas fa-chevron-down"></i>
-    //                 </span>
-    //               </div>
-    //         </div>;
-    //     }
-    //   <nav>
-    //     {
-    //       currentUser ? personalGreeting() : sessionLinks()
-    //     }
-    //   </nav>
-    // )
-
-  
-  // onClick={() => logout()}
-  
-  

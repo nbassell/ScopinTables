@@ -71,10 +71,6 @@
   width: 100%;
 }
 
-.form-input .location-dropdown {
-
-}
-
 .social-session {
   display: flex;
   justify-content: space-between;
@@ -96,7 +92,7 @@ hr {
 }
 
 .btn-session-submit {
-  margin: 15px 0 30px;
+  margin: 15px 0 15px;
   background-color: #da3743;
   border-color: #b8222d;
   padding: 14px 28px;
@@ -112,6 +108,11 @@ hr {
   letter-spacing: 1px;
   box-sizing: border-box; 
   transition: background-color 300ms ease-out;
+}
+
+#demo-input {
+  margin-top: 0; 
+  width: 398px;
 }
 
 .btn-ref-signup {

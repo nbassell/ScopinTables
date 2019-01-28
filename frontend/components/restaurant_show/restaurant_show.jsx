@@ -2,18 +2,19 @@ import React from "react";
 
 class RestaurantShow extends React.Component {
   componentDidMount() {
-    this.props.fetchRestaurant();
+    this.props.fetchRestaurant(this.props.match.params.id);
+    window.scrollTo(0, 0);
   }
-
+  
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.id !== nextProps.match.params.id) {
-      nextProps.fetchRestaurant();
+      nextProps.fetchRestaurant(nextProps.match.params.id);
+      window.scrollTo(0, 0);
     }
   }
 
   mainContent() {
-    const { restaurant } = this.props;
-
+    const restaurant = this.props.restaurant;
     return (
       <div className="show-page-main">
         <div className="show-overview">
@@ -39,9 +40,7 @@ class RestaurantShow extends React.Component {
 
     return (
       <div className="show-page-master">
-        <div className="show-page-bg">
-          <img src={window.images.showBackground}
-               className="show-page-bg-image" alt="table-42-bg" />
+        <div className="show-page-bg-image" alt="scopin-tables-restaurant-bg">
         </div>
         <div className="show-page-and-form">
           {this.mainContent()}

@@ -4,11 +4,11 @@ import SearchUtil from '../util/search_api_util';
 export const RECEIVE_RESTAURANTS = 'RECEIVE_RESTAURANTS';
 export const RECEIVE_RESTAURANT = 'RECEIVE_RESTAURANT';
 
-export const receiveRestaurant = ({ restaurant, reviews }) => {
+export const receiveRestaurant = restaurant => {
   return ({
     type: RECEIVE_RESTAURANT,
     restaurant,
-    reviews
+    // reviews
   });
 };
 
@@ -26,7 +26,9 @@ export const fetchRestaurants = () => dispatch => {
 
 export const fetchRestaurant = (id) => dispatch => {
   return APIUtil.fetchRestaurant(id).then(
-    restaurant => dispatch(receiveRestaurant(restaurant))
+    restaurant => {
+      dispatch(receiveRestaurant(restaurant))
+    }
   );
 };
 
