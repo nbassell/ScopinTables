@@ -5,7 +5,7 @@ class RestaurantSearch extends React.Component {
     super(props);
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.searchResult = this.searchResult.bind(this);
+    // this.searchResult = this.searchResult.bind(this);
     this.stringIncludeKey = this.stringIncludeKey.bind(this);
     this.state = {
       inputVal: ''
@@ -16,16 +16,16 @@ class RestaurantSearch extends React.Component {
     this.setState({ inputVal: event.currentTarget.value });
   }
 
-  matches() {
-    const matches = [];
-    if (this.state.inputVal.length === 0) {
-      return this.props.restaurants;
-    }
+  // matches() {
+  //   const matches = [];
+  //   if (this.state.inputVal.length === 0) {
+  //     return this.props.restaurants;
+  //   }
 
-    this.props.restaurants.forEach(restaurant => {
-      const sub = restaurant.slice(0, this.state.restaurant)
-    })
-  }
+  //   this.props.restaurants.forEach(restaurant => {
+  //     const sub = restaurant.slice(0, this.state.restaurant)
+  //   })
+  // }
 
   stringIncludeKey(string, key) {
     if (key === '') return true;
@@ -46,13 +46,22 @@ class RestaurantSearch extends React.Component {
     const restNames = this.props.restaurants.map((restaurant, idx) => {
       if (this.state.inputVal === '' || this.stringIncludeKey(restaurant, this.state.inputVal)) {
         return (
-          <li key="{idx}"></li>
+          <li key={idx}>{restaurant}</li>
         );
       }
     });
+
+    return (
+      <>
+        <div id="search-container">
+          <input id="rest-search" type="text" onChange={this.handleSubmit} value={this.state.inputVal} placeholder="Location, Restaurant, or Cuisine"/>
+          <ul className="search-list">
+            {restNames}
+          </ul>
+        </div>  
+      </>
+    )
   }
-  
-  
-  
-  
 }
+
+export default RestaurantSearch;
