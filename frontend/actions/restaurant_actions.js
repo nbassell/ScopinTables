@@ -39,3 +39,11 @@ export const searchRestaurants = (query) => dispatch => {
     }
   );
 };
+
+export const preSearch = () => dispatch => {
+  return SearchUtil.preSearch().then(
+    payload => {
+      dispatch(receiveRestaurants(payload));
+    }
+  );
+};

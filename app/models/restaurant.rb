@@ -28,6 +28,9 @@ class Restaurant < ApplicationRecord
 
   # has_many :cuisines, through: :restaurant_cuisines, source: cuisine
 
+  def self.pre_search
+    Restaurant.select('id, name')
+  end
 
   def self.search(search_term)
     Restaurant.where(

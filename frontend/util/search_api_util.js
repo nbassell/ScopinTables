@@ -5,3 +5,10 @@ export const searchRestaurants = (search_term) => {
     data: search_term
   });
 };
+
+export const preSearch = () => {
+  return $.ajax({
+    method: 'GET',
+    url: '/api/restaurants_pre_search',
+  });
+};

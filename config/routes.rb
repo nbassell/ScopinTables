@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :reservations, only: [:show, :edit, :destroy]
     resources :reviews, only: [:edit, :destroy]
     resources :favorites, only: [:create, :destroy]
+    get '/restaurants_pre_search', to: 'restaurants#pre_search'
     get '/restaurant/search', to: 'restaurants#search'
   end
 

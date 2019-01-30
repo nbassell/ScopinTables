@@ -13,6 +13,11 @@ class Api::RestaurantsController < ApplicationController
     end
   end
 
+  def pre_search
+    @restaurants = Restaurant.pre_search
+    render json: @restaurants
+  end
+
   def search
     @restaurants = Restaurant.search(params[:search_term]).order(:name)
     render :index

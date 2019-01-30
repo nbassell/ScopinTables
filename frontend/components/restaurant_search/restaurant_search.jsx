@@ -7,7 +7,14 @@ class RestaurantSearch extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateField = this.updateField.bind(this);
     this.stringIncludeKey = this.stringIncludeKey.bind(this);
-    this.state = { search_term: '' };
+    this.state = {
+      search_term: '',
+
+    };
+  }
+  
+  componentDidMount() {
+    this.props.preSearch();
   }
   
   //In order to get the restaurants in state so they appear in the autocomplete,
@@ -24,6 +31,9 @@ class RestaurantSearch extends React.Component {
     if (key === '') return true;
     if (string[0].toLowerCase() === key[0].toLowerCase()) {
       return this.stringIncludeKey(string.slice(1), key.slice(1));
+    }
+    else if (string.length > 1) {
+      return this.stringIncludeKey(string.slice(1), key);
     }
     return false;
   } 
@@ -59,10 +69,11 @@ class RestaurantSearch extends React.Component {
           { this.searchBanner() }
         </div>
         <div className="search-container">
-          <div className="header-res">Reservation bar goes here</div>
+          <div className="header-res">Reservation bar goes here
             <div className="res-date"></div>
             <div className="res-time"></div>
             <div className="res-people"></div>
+          </div>
           <form className="search-form" autoComplete="off" onSubmit={this.handleSubmit}>
             <div className="autocomplete">
               <div className="autocomplete-form">
