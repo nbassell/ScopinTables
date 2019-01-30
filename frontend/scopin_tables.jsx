@@ -21,4 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
+
+  window.addEventListener(`hashchange`, () => {
+    window.scrollTo(0, 0);
+  });
 }); 

@@ -5,35 +5,22 @@ class RestaurantSearch extends React.Component {
     super(props);
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.searchResult = this.searchResult.bind(this);
+    this.updateField = this.updateField.bind(this);
     this.stringIncludeKey = this.stringIncludeKey.bind(this);
-    this.state = {
-      inputVal: ''
-    };
+    this.state = { search_term: '' };
   }
   
-  handleInput(event) {
-    this.setState({ inputVal: event.currentTarget.value });
+  updateField(field) {
+    return (e) => this.setState({ [field]: e.currentTarget.value });
   }
-
-  // matches() {
-  //   const matches = [];
-  //   if (this.state.inputVal.length === 0) {
-  //     return this.props.restaurants;
-  //   }
-
-  //   this.props.restaurants.forEach(restaurant => {
-  //     const sub = restaurant.slice(0, this.state.restaurant)
-  //   })
-  // }
 
   stringIncludeKey(string, key) {
     if (key === '') return true;
-    if (string[0] === key[0]) {
+    if (string[0].toLowerCase() === key[0].toLowerCase()) {
       return this.stringIncludeKey(string.slice(1), key.slice(1));
     }
     return false;
-  }
+  } 
   
   handleSubmit(e) {
     e.preventDefault();
@@ -42,24 +29,45 @@ class RestaurantSearch extends React.Component {
     });
   }
 
-  render() {
-    const restNames = this.props.restaurants.map((restaurant, idx) => {
-      if (this.state.inputVal === '' || this.stringIncludeKey(restaurant, this.state.inputVal)) {
-        return (
-          <li key={idx}>{restaurant}</li>
-        );
-      }
-    });
+  searchBanner() {
+    if (this.props.location.pathname !== "/") {
+      return null;
+    }
 
     return (
-      <>
-        <div id="search-container">
-          <input id="rest-search" type="text" onChange={this.handleSubmit} value={this.state.inputVal} placeholder="Location, Restaurant, or Cuisine"/>
-          <ul className="search-list">
-            {restNames}
-          </ul>
-        </div>  
-      </>
+        <h2 className="header-banner">Find your table for any occasion</h2>
+    );
+  }
+
+  render() {
+
+    const matches = this.props.restaurants.filter((restaurant) => {
+      return (this.state.search_term === '' || this.stringIncludeKey(restaurant.name, this.state.search_term));
+    });
+    const restNames = matches.map((restaurant, idx) => {
+      return <li key={idx}>{restaurant.name}</li>
+    })  
+
+    return (
+      <div className="picker-form">
+        <div className="header-res">Reservation bar goes here</div>
+        <div className="search-container">
+          { this.searchBanner() }
+          <form className="search-form" autoComplete="off" onSubmit={this.handleSubmit}>
+            <div className="autocomplete">
+              <input id="rest-search"
+                    type="text"
+                    onChange={this.updateField("search_term")}
+                    value={this.state.search_term}
+                    placeholder="Location, Restaurant, or Cuisine"/>
+              <ul className="search-dropdown">
+                {restNames}
+              </ul>
+              <button type="submit" className="header-submit">Let's go</button>
+            </div>
+          </form>
+        </div>
+      </div>
     )
   }
 }

@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import { fetchRestaurant } from '../../actions/restaurant_actions';
 import RestaurantShow from "./restaurant_show";
 
-const mapStateToProps = (oldState, ownProps) => {
+const mapStateToProps = (state, ownProps) => {
   return ({
-    restaurant: oldState.entities.restaurants[ownProps.match.params.id],
-    errors: oldState.errors.restaurant,
-    currentUser: oldState.session.currentUser
+    restaurant: state.entities.restaurants[ownProps.match.params.id],
+    errors: state.errors.restaurant,
+    currentUser: state.session.currentUser
   });
 };
 

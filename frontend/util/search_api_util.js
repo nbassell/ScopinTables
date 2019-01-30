@@ -1,7 +1,7 @@
-export const searchRestaurants = (query) => {
+export const searchRestaurants = (search_term) => {
   return $.ajax({
     method: 'GET',
     url: '/api/restaurant/search',
-    data: { restaurant: query }
+    data: search_term
   });
 };

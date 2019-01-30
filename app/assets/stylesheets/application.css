@@ -17,14 +17,14 @@
 
 body {
   background-color: #f7f7f7;
-  padding-top: 28px;
-  max-width: 1600px;
-  margin: auto;
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
 #root {
   background: #fff;
-  /* width: 84%; */
-  /* margin: auto; */
+  padding-top: 28px;
+  max-width: 1600px;
+  margin: auto;
+  width: 85%;
+  margin: auto;
 }

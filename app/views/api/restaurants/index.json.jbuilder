@@ -1,7 +1,5 @@
-json.restaurants do
   @restaurants.each do |restaurant|
     json.set! restaurant.id do
-      json.extract! restaurant, :name, :price, :description
+      json.extract! restaurant, :id, :name
     end
   end
-end

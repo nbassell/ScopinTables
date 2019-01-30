@@ -1,7 +1,7 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import RestaurantSearch from './restaurant_search';
 import { searchRestaurants } from '../../actions/restaurant_actions';
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = state => {
   return {
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(RestaurantSearch);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(RestaurantSearch));
