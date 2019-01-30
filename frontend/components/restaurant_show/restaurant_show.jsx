@@ -1,20 +1,24 @@
 import React from "react";
 
 class RestaurantShow extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   componentDidMount() {
-    this.props.fetchRestaurant(this.props.match.params.id);
+    this.props.fetchRestaurant();
     window.scrollTo(0, 0);
   }
   
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.id !== nextProps.match.params.id) {
-      nextProps.fetchRestaurant(nextProps.match.params.id);
+      nextProps.fetchRestaurant();
       window.scrollTo(0, 0);
     }
   }
 
   mainContent() {
-    const restaurant = this.props.restaurant;
+    const { restaurant } = this.props;
     return (
       <div className="show-page-main">
         <div className="show-overview">
@@ -23,7 +27,7 @@ class RestaurantShow extends React.Component {
           <div className="show-details">
             <ul className="rest-info">
               <li>Address: {restaurant.address}</li>
-              <li>Phone: {restaurant.phone_number}</li>
+              <li>Phone #: {restaurant.phone_number}</li>
               <li>Opens at {restaurant.opening_time}</li>
               <li>Closes at {restaurant.closing_time}</li>
             </ul>
@@ -36,8 +40,8 @@ class RestaurantShow extends React.Component {
 
   render() {
     const { restaurant } = this.props;
-    if (!restaurant || !restaurant.fetched) return null;
-
+    if (!restaurant) {
+       return null};
     return (
       <div className="show-page-master">
         <div className="show-page-bg-image" alt="scopin-tables-restaurant-bg">

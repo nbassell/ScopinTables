@@ -12,9 +12,8 @@ class RestaurantIndexItem extends React.Component {
     
     return (
       <li className="search-result">
-        <hr/>
-        <Link to={`/restaurants/${restaurant.id}`}>
-          <img className="sr-thumbnail" src="https://s3.amazonaws.com/scopin-tables-dev-aa/test_thumbnail.jpg" alt="test_thumbnail"/>
+        <Link to={`/restaurants/${restaurant.id}`} className="sr-thumbnail" >
+          <img className="img-thumbnail" src="https://s3.amazonaws.com/scopin-tables-dev-aa/test_thumbnail.jpg" alt="test_thumbnail"/>
         </Link>
         <div className="sr-restaurant">
           <Link to={`/restaurants/${restaurant.id}`}>

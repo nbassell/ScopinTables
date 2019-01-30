@@ -8,19 +8,6 @@
   width: 100%;
 }
 
-.header-res,
-.autocomplete,
-#rest-search {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  background-clip: border-box;
-  box-sizing: border-box;
-  height: 48px;
-  margin: 0 24px;
-  border-radius: 4px;
-}
-
 /*rest-search == input */
 #rest-search {
   width: 288px;
@@ -34,7 +21,7 @@
   box-shadow: none;
   text-overflow: ellipsis;
   white-space: nowrap;
-  clear: both;
+  /* clear: both; */
   vertical-align: top;
   position: relative;
 }
@@ -44,9 +31,7 @@
   outline: none;
 }
 
-.header-res {
-  background-color: #fff;
-}
+
 
 .header-submit:hover {
   background-color: #b8222d;

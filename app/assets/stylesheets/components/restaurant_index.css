@@ -1,12 +1,12 @@
 .sr-index {
-  display: flex;
-  justify-content: column;
+  display: block;
+  /* justify-content: column; */
   width: 62.5%;
   box-sizing: border-box;
   position: relative;
   min-height: 188px;
   line-height: 16px;
-
+  font-size: 16px;
 }
 
 .search-result {
@@ -17,7 +17,16 @@
 }
 
 .sr-thumbnail {
-  height: 27%;
-  width: 27%;
+  height: 37%;
+  width: 37%;
   margin: 10px;
+  border-radius: 4px;
+  /* display: inline-block; */
+  vertical-align: middle;
+  box-sizing: border-box;
+  float: left;
+}
+
+.img-thumbnail {
+  height: 100%;
 }

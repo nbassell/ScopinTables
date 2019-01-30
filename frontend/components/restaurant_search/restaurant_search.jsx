@@ -35,7 +35,7 @@ class RestaurantSearch extends React.Component {
     }
 
     return (
-        <h2 className="header-banner">Find your table for any occasion</h2>
+        <h2>Find your table for any occasion</h2>
     );
   }
 
@@ -50,9 +50,11 @@ class RestaurantSearch extends React.Component {
 
     return (
       <div className="picker-form">
-        <div className="header-res">Reservation bar goes here</div>
-        <div className="search-container">
+        <div className="header-banner">
           { this.searchBanner() }
+        </div>
+        <div className="search-container">
+          <div className="header-res">Reservation bar goes here</div>
           <form className="search-form" autoComplete="off" onSubmit={this.handleSubmit}>
             <div className="autocomplete">
               <input id="rest-search"
