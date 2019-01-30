@@ -10,11 +10,14 @@ class RestaurantSearch extends React.Component {
     this.state = { search_term: '' };
   }
   
+  //In order to get the restaurants in state so they appear in the autocomplete,
+  //will need to write another function that uses Restaurant.search to query
+  //the database and pull the restaurants asynchronously (after say, 1s).
+  //We can then use onChange to call both updateField and this new function.
   updateField(field) {
     this.setState({
       search_term: field.target.value
     });
-    debugger
   }
 
   stringIncludeKey(string, key) {
@@ -50,7 +53,6 @@ class RestaurantSearch extends React.Component {
     const restNames = matches.map((restaurant, idx) => {
       return <li key={idx}>{restaurant.name}</li>
     })  
-
     return (
       <div className="picker-form">
         <div className="header-banner">
@@ -58,6 +60,9 @@ class RestaurantSearch extends React.Component {
         </div>
         <div className="search-container">
           <div className="header-res">Reservation bar goes here</div>
+            <div className="res-date"></div>
+            <div className="res-time"></div>
+            <div className="res-people"></div>
           <form className="search-form" autoComplete="off" onSubmit={this.handleSubmit}>
             <div className="autocomplete">
               <div className="autocomplete-form">

@@ -1,0 +1,131 @@
+.greeting {
+  display: flex;
+  /* font-weight: 700; */
+}
+
+.greeting-notif-wrapper {
+  display: flex;
+  align-self: center;
+}
+
+.user-content-container {
+  width: 100%;
+}
+
+.dropdown-content-container {
+  display: none;
+  position: absolute;
+  min-width: 75px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 4;
+  color: black;
+  right: 0;
+  border-radius: 2px;
+}
+
+.user-profile {
+  border-top: 1px solid #ccc;
+}
+
+.user-profile,
+.user-favorites,
+.btn-logout {
+  box-sizing: border-box;
+  padding: 13px 12px;
+  width: 100%;
+}
+
+.dropdown-logout-container {
+  box-sizing: border-box;
+  display: contents;
+  padding: 13px 16px;
+  width: 80%;
+  text-align: left;
+  margin-right: 150px;
+}
+
+.btn-logout {
+  margin-top: 10px;
+  padding-top: 10px;
+  background-color: transparent;
+  border-color: transparent;
+  color: #666!important;
+  position: relative;
+  display: inline-block;
+  padding: 0 .75rem;
+  font-size: 100%;
+  width: 100%;
+  text-align: left;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+
+.btn-logout:hover,
+.user-profile:hover,
+.user-favorites:hover {
+  color: #333!important;
+  background-color: rgba(0,0,0,.03);
+  cursor: pointer;
+}
+
+.show {
+  display: block;
+}
+
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: left;
+  padding: 10px 13px;
+}
+
+.btn-user-dropdown {
+  background-color: transparent;
+  border-color: transparent;
+  color: #333;
+  position: relative;
+  display: inline-block;
+  padding: 0 1rem;
+  font-size: 100%;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.dropdown-arrow::after {
+  position: relative;
+  content: " ";
+  left: 165px;
+  bottom: 40px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid lightgrey;
+}
+
+.dropdown-arrow {
+  height: 0;
+}
+
+.dropdown-icon {
+  margin-left: 4px;
+}
+
+.dropdown-content {
+  width: 232px;
+  color: #666!important;
+  margin-top: 10px;
+  padding: 10px;
+  display: block;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid lightgrey;
+  z-index: 3;
+}
+
+.dropdown-user-container {
+  display: flex;
+}
