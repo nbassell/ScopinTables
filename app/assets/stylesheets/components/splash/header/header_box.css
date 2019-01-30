@@ -43,7 +43,7 @@
 }
 
 .search-container {
-  display: inline-block;
+  display: flex;
   width: 100%;
   box-sizing: border-box;
   color: #333;
@@ -107,6 +107,15 @@
   background-clip: border-box;
   box-sizing: border-box;
   height: 48px;
-  margin: 0 24px;
+  /* margin: 0 24px; */
   border-radius: 4px;
+}
+
+.autocomplete {
+  display: flex;
+}
+
+.autocomplete-form {
+  position: relative;
+  margin: 0 24px;
 }

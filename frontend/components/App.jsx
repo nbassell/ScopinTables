@@ -10,7 +10,7 @@ import LoginFormContainer from "./session_form/login_form_container";
 import SignupFormContainer from "./session_form/signup_form_container";
 import RestaurantShowContainer from "./restaurant_show/restaurant_show_container";
 import RestaurantIndexContainer from './restaurant_index/restaurant_index_container';
-import Splash from './splash';
+import Splash from './splash/splash';
 import Footer from './main/footer';
 import { AuthRoute } from '../util/route_util';
 import Modal from './modal/modal_container';

@@ -1,0 +1,48 @@
+.top-cuisines-section {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.top-cuisines {
+  display: flex;
+  justify-content: center;
+}
+
+.top-cuisines-header {
+  margin-left: -55px;
+  margin-top: 75px;
+  margin-bottom: 25px;
+  color: #2d333f;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.tc-border-top {
+  border-top: 1px solid #d8d9db;
+}
+
+.top-cuisines-photo-container {
+  background: linear-gradient(rgba(47, 45, 65, 0.7), rgba(47, 45, 65, 0.7));
+  height: 208px;
+  width: 208px;
+  position: relative;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.top-cuisines-photo {
+  border-radius: 4px;
+  /* z-index: -1; */
+}
+
+.top-cuisines-text {
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-size: 18px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}

@@ -8,9 +8,8 @@
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 416px;
+  height: 288px;
   position: relative;
-  z-index: 1;
   padding-top: 132px;
   box-sizing: border-box;
   box-shadow: 0 1px 6px 2px rgba(14, 83, 221, 0.1);
@@ -18,3 +17,59 @@
   width: 100%;
 }
 
+.show-loading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+.show-page-and-form {
+  display: flex;
+  justify-content:space-around;
+}
+
+.show-page-main {
+  position: relative;
+  top: -50px;
+  width: 700px;
+  margin-left: 100px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,.12);
+}
+
+
+.show-title {
+  color: #2d333f;
+  width: 80%;
+  padding: 32px 16px 32px 16px;
+  text-align: left;
+  font-size: 48px;
+  font-weight: 600;
+  /* padding: 15px ; */
+  border-bottom: .5px solid #ccc;
+}
+
+.show-details {
+  width: 590px;
+  margin: auto;
+  font-size: 18px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    color: black;
+    margin-bottom: 2px;
+  }
+}
+
+.show-blurb {
+  color: black;
+  width: 590px;
+  margin: 10px auto;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+}

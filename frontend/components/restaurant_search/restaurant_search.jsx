@@ -11,7 +11,10 @@ class RestaurantSearch extends React.Component {
   }
   
   updateField(field) {
-    return (e) => this.setState({ [field]: e.currentTarget.value });
+    this.setState({
+      search_term: field.target.value
+    });
+    debugger
   }
 
   stringIncludeKey(string, key) {
@@ -57,15 +60,17 @@ class RestaurantSearch extends React.Component {
           <div className="header-res">Reservation bar goes here</div>
           <form className="search-form" autoComplete="off" onSubmit={this.handleSubmit}>
             <div className="autocomplete">
-              <input id="rest-search"
-                    type="text"
-                    onChange={this.updateField("search_term")}
-                    value={this.state.search_term}
-                    placeholder="Location, Restaurant, or Cuisine"/>
-              <ul className="search-dropdown">
-                {restNames}
-              </ul>
-              <button type="submit" className="header-submit">Let's go</button>
+              <div className="autocomplete-form">
+                <input id="rest-search"
+                      type="text"
+                      onChange={this.updateField}
+                      value={this.state.search_term}
+                      placeholder="Location, Restaurant, or Cuisine"/>
+                <ul className="search-dropdown">
+                  {restNames}
+                </ul>
+              </div>
+                <button type="submit" className="header-submit">Let's go</button>
             </div>
           </form>
         </div>
