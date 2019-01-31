@@ -84,7 +84,7 @@ class Greeting extends React.Component {
 
     return (
       <nav className="nav-right">
-        {(this.props.currentUser === null) ? sessionLinks : personalGreeting }
+        {(this.props.currentUser) ? personalGreeting : sessionLinks}
       </nav>
     );
   }

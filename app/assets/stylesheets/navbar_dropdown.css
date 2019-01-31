@@ -24,10 +24,6 @@
   border-radius: 2px;
 }
 
-.user-profile {
-  border-top: 1px solid #ccc;
-}
-
 .user-profile,
 .user-favorites,
 .btn-logout {
@@ -97,12 +93,25 @@
   position: relative;
   content: " ";
   left: 165px;
-  bottom: 40px;
+  bottom: 39px;
   width: 0;
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-bottom: 10px solid lightgrey;
+}
+
+.dropdown-arrow::before {
+  position: relative;
+  content: " ";
+  left: 181px;
+  bottom: 38px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #fff;
+  z-index: 5;
 }
 
 .dropdown-arrow {

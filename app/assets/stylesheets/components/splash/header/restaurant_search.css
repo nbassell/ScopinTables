@@ -1,0 +1,16 @@
+.search-dropdown {
+  display: none;
+}
+
+#search-dropdown {
+  width: 100%;
+  min-height: 100px;
+  color: #fff;
+  position: absolute;
+}
+
+.search-dropdown ul {
+  padding: 0;
+  margin: 0;
+}
+

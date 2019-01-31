@@ -31,15 +31,6 @@
   outline: none;
 }
 
-
-
 .header-submit:hover {
   background-color: #b8222d;
-}
-
-.search-dropdown {
-  width: 100%;
-  min-height: 100px;
-  color: black;
-  position: absolute;
 }

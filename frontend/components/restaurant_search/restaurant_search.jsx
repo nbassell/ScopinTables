@@ -1,34 +1,54 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 class RestaurantSearch extends React.Component {
   constructor(props) {
     super(props);
-
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateField = this.updateField.bind(this);
     this.stringIncludeKey = this.stringIncludeKey.bind(this);
     this.state = {
       search_term: '',
-
+      isShowing: false,
     };
+    
+
   }
   
   componentDidMount() {
     this.props.preSearch();
   }
   
+  dropdownHandler() {
+    // e.preventDefault();
+    
+    if (this.state.search_term.length > 0 ) {
+      this.setState({ isShowing: true });
+    } else {
+      this.setState({ isShowing: false });
+    }
+  }
+
   //In order to get the restaurants in state so they appear in the autocomplete,
   //will need to write another function that uses Restaurant.search to query
   //the database and pull the restaurants asynchronously (after say, 1s).
   //We can then use onChange to call both updateField and this new function.
-  updateField(field) {
+  updateField(e) {
+    
     this.setState({
-      search_term: field.target.value
+      search_term: e.target.value
     });
+      
+    if (e.target.value.length > 0) {
+      this.setState({ isShowing: true });
+    } else {
+      this.setState({ isShowing: false });
+    }
   }
 
   stringIncludeKey(string, key) {
     if (key === '') return true;
+    if (string === "") return false;
     if (string[0].toLowerCase() === key[0].toLowerCase()) {
       return this.stringIncludeKey(string.slice(1), key.slice(1));
     }
@@ -57,11 +77,17 @@ class RestaurantSearch extends React.Component {
 
   render() {
 
+    const showing = this.state.isShowing ? "show" : "";
+
     const matches = this.props.restaurants.filter((restaurant) => {
       return (this.state.search_term === '' || this.stringIncludeKey(restaurant.name, this.state.search_term));
     });
     const restNames = matches.map((restaurant, idx) => {
-      return <li key={idx}>{restaurant.name}</li>
+      return  (
+        <Link to={`/restaurants/${restaurant.id}`} key={idx}>
+          <p>{restaurant.name}</p>
+        </Link>
+      )
     })  
     return (
       <div className="picker-form">
@@ -82,9 +108,11 @@ class RestaurantSearch extends React.Component {
                       onChange={this.updateField}
                       value={this.state.search_term}
                       placeholder="Location, Restaurant, or Cuisine"/>
-                <ul className="search-dropdown">
-                  {restNames}
-                </ul>
+                <div id="search-dropdown" className={`search-dropdown ${showing}`}>
+                  <ul>
+                    {restNames}
+                  </ul>
+                </div>
               </div>
                 <button type="submit" className="header-submit">Let's go</button>
             </div>
