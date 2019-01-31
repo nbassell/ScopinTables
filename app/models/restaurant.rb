@@ -2,21 +2,20 @@
 #
 # Table name: restaurants
 #
-#  id            :bigint(8)        not null, primary key
-#  name          :string           not null
-#  address       :string           not null
-#  city          :string           not null
-#  state         :string           not null
-#  zipcode       :integer          not null
-#  phone_number  :string           not null
-#  price         :integer          not null
-#  capacity      :integer          not null
-#  opening_time  :time             not null
-#  closing_time  :time             not null
-#  created_at    :datetime         not null
-#  updated_at    :datetime         not null
-#  description   :text
-#  #<ActiveRecord::ConnectionAdapters::PostgreSQL::TableDefinition :text
+#  id           :bigint(8)        not null, primary key
+#  name         :string           not null
+#  address      :string           not null
+#  city         :string           not null
+#  state        :string           not null
+#  zipcode      :integer          not null
+#  phone_number :string           not null
+#  price        :integer          not null
+#  capacity     :integer          not null
+#  opening_time :time             not null
+#  closing_time :time             not null
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  description  :text
 #
 
 class Restaurant < ApplicationRecord

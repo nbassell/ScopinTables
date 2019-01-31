@@ -72,7 +72,7 @@ class LoginForm extends React.Component {
   closeAndRemoveErrors(e) {
     e.preventDefault();
     this.props.closeModal();
-    this.props.removeErrors();
+    this.props.clearSessionErrors();
   }
   
   update(field) {

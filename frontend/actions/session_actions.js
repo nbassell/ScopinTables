@@ -3,7 +3,8 @@ import * as APIUtil from '../util/session_api_util';
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
-export const REMOVE_SESSION_ERRORS = "REMOVE_ERRORS";
+export const CLEAR_SESSION_ERRORS = 'CLEAR_SESSION_ERRORS';
+export const RECEIVE_DETAILED_USER = 'RECEIVE_DETAILED_USER';
 
 const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
@@ -19,9 +20,9 @@ export const receiveSessionErrors = errors => ({
   errors
 });
 
-export const removeErrors = () => {
+export const clearSessionErrors = () => {
   return ({
-    type: REMOVE_SESSION_ERRORS,
+    type: CLEAR_SESSION_ERRORS,
   });
 };
 
@@ -44,5 +45,25 @@ export const login = user => dispatch => (
 export const logout = () => dispatch => (
   APIUtil.logout().then(user => (
     dispatch(logoutCurrentUser())
+  ), err => (
+    dispatch(receiveSessionErrors(err.responseJSON))
   ))
 );
+
+export const receiveDetailedUser = ({ user, restaurants, reservations, reviews, favorites }) => {
+  return ({
+    type: RECEIVE_DETAILED_USER,
+    user,
+    restaurants,
+    reservations,
+    reviews,
+    favorites
+  });
+};
+
+export const fetchUserProfile = id => dispatch => {
+  dispatch(loadingProfile());
+  return SessionAPIUtil.fetchUserProfile(id).then(payload => {
+    dispatch(receiveDetailedUser(payload));
+  });
+};

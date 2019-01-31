@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_25_221308) do
+ActiveRecord::Schema.define(version: 2019_01_31_042152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,24 @@ ActiveRecord::Schema.define(version: 2019_01_25_221308) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "restaurant_id", null: false
+    t.integer "table_size", null: false
+    t.datetime "start_datetime", null: false
+    t.datetime "end_datetime", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["end_datetime"], name: "index_reservations_on_end_datetime"
+    t.index ["restaurant_id", "end_datetime", "table_size"], name: "index_reservations_on_restaurant_and_end_and_table"
+    t.index ["restaurant_id", "start_datetime", "table_size"], name: "index_reservations_on_restaurant_and_start_and_table"
+    t.index ["restaurant_id"], name: "index_reservations_on_restaurant_id"
+    t.index ["start_datetime"], name: "index_reservations_on_start_datetime"
+    t.index ["table_size"], name: "index_reservations_on_table_size"
+    t.index ["user_id", "start_datetime"], name: "index_reservations_on_user_id_and_start_datetime"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
