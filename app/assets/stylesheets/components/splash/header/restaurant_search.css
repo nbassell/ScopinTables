@@ -1,3 +1,22 @@
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  background-clip: border-box;
+  background-origin: padding-box;
+  box-sizing: border-box;
+}
+
+.fa-search {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  color: #999;
+  margin: 0;
+  padding: 0;
+  z-index: 4;
+  font-size: 20px;
+}
+
 .search-dropdown {
   display: none;
 }
@@ -14,3 +33,17 @@
   margin: 0;
 }
 
+.search-dropdown a p {
+  background-color: #fff;
+  margin: 0;
+  color: #666;
+  border: 10px solid #fff;
+  padding-left: 15px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.search-dropdown a:hover p:hover {
+  color: #fff;
+  background-color: #da3743;
+}

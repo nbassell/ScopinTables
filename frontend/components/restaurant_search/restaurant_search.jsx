@@ -103,11 +103,14 @@ class RestaurantSearch extends React.Component {
           <form className="search-form" autoComplete="off" onSubmit={this.handleSubmit}>
             <div className="autocomplete">
               <div className="autocomplete-form">
-                <input id="rest-search"
-                      type="text"
-                      onChange={this.updateField}
-                      value={this.state.search_term}
-                      placeholder="Location, Restaurant, or Cuisine"/>
+                <div className="search-wrapper">
+                  <i className="fas fa-search"></i>
+                  <input id="rest-search"
+                        type="text"
+                        onChange={this.updateField}
+                        value={this.state.search_term}
+                        placeholder="Location, Restaurant, or Cuisine"/>
+                </div>
                 <div id="search-dropdown" className={`search-dropdown ${showing}`}>
                   <ul>
                     {restNames}
