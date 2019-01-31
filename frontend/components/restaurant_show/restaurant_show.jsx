@@ -1,4 +1,5 @@
 import React from "react";
+import ReservationForm from '../reservation/reservation_container';
 
 class RestaurantShow extends React.Component {
   constructor(props) {
@@ -48,6 +49,9 @@ class RestaurantShow extends React.Component {
         </div>
         <div className="show-page-and-form">
           {this.mainContent()}
+          <div className="show-page-reservation">
+            <ReservationForm />
+          </div>
         </div>
       </div>
     );

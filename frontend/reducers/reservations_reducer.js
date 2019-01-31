@@ -1,10 +1,9 @@
-
 import merge from "lodash/merge";
 import { RECEIVE_RESERVATION, REMOVE_RESERVATION } from "../actions/reservation_actions";
 import { RECEIVE_DETAILED_USER } from "../actions/session_actions";
 
-export default (oldState = {}, action => {
-  Object.freeze(state);
+export default (oldState = {}, action) => {
+  Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_RESERVATION:
       return merge({}, oldState, { [action.reservation.id]: action.reservation });
@@ -22,4 +21,4 @@ export default (oldState = {}, action => {
     default:
       return oldState;
   }
-});
+};
