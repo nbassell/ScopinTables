@@ -7,13 +7,19 @@ export default (oldState = {}, action => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_RESERVATION:
-      return merge({}, oldState, { [action.reservation.id]: action.reservation })
+      return merge({}, oldState, { [action.reservation.id]: action.reservation });
     case REMOVE_RESERVATION:
       let newState = merge({}, oldState);
       delete newState[action.reservation.id];
-      let 
-      return merge({}, oldState);
+      let Ids = newState.reservation_ids.slice();
+      let removedIdx = Ids.indexOf(action.reservation.id);
+      delete newState.reservation_ids;
+      return merge(newState, {
+        reservation_ids: Ids.slice(0, removedIdx).concat(Ids.slice(removedIdx + 1))
+      });
+    case RECEIVE_DETAILED_USER:
+      return action.reservations;
     default:
       return oldState;
   }
-})
+});
