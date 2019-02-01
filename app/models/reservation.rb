@@ -61,7 +61,7 @@ class Reservation < ApplicationRecord
 
     if Reservation.where("start_datetime > ? AND end_datetime < ?",
       start_param, end_param).where("user_id = ?", user_id).exists?
-      errors[:user] << "You have a conflicting reservation"
+      errors[:reservation] << "You have a conflicting reservation"
     end
   end
 

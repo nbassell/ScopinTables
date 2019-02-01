@@ -10,7 +10,7 @@ class RestaurantIndexItem extends React.Component {
   render() {
 
     const { id, name, address, city, price, thumbnailUrl } = this.props.restaurant;
-    const linkPath = "restaurants/" + id;
+    const linkPath = "/restaurants/" + id;
     return (
       <li className="restaurant-index-item">
         <div className="rii-col-1">

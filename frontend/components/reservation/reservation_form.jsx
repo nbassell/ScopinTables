@@ -47,8 +47,10 @@ class ReservationForm extends React.Component {
       return null;
     } else {
       const errorLis = errors.map((error, idx) => {
+        debugger
+        const truncError = error.split(' ').slice(1).join(' ');
         return (
-          <li className="reservation-message-text" key={idx}>{error}</li>
+          <li className="reservation-message-text" key={idx}>{truncError}</li>
         )
       })
       return (
