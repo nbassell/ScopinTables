@@ -1,5 +1,5 @@
 import React from "react";
-import ReservationForm from '../reservation/reservation_container';
+import ReservationForm from '../reservation/reservation_form_container';
 
 class RestaurantShow extends React.Component {
   constructor(props) {

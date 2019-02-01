@@ -27,7 +27,7 @@ const App = () => (
       <Route path="/restaurants/:id" component={RestaurantShowContainer} />
       <Route path="/restaurant/search" component={RestaurantIndexContainer} />
     </Switch>
-    <Footer />
+    {/* <Footer /> */}
   </div>
 );
 

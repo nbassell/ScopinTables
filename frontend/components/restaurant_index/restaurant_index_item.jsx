@@ -8,19 +8,40 @@ class RestaurantIndexItem extends React.Component {
 
   render() {
 
-    const { restaurant } = this.props;
-    
+    const { id, name, city, state, price, thumbnailUrl } = this.props.restaurant;
+    const linkPath = "restaurants/" + id;
+    debugger
     return (
-      <li className="search-result">
-        <Link to={`/restaurants/${restaurant.id}`} className="sr-thumbnail" >
-          <img className="img-thumbnail" src="https://s3.amazonaws.com/scopin-tables-dev-aa/test_thumbnail.jpg" alt="test_thumbnail"/>
-        </Link>
-        <div className="sr-restaurant">
-          <Link to={`/restaurants/${restaurant.id}`}>
-            <div className="sr-restaurant-name">{restaurant.name}</div>
+      <li className="restaurant-index-item">
+        <div className="rii-col-1">
+          <Link to={`/restaurants/${id}`} className="rii-thumbnail" >
+            <img className="img-thumbnail" src="https://s3.amazonaws.com/scopin-tables-dev-aa/test_thumbnail.jpg" alt="test_thumbnail"/>
           </Link>
-          <div className="sr-price">Price will go here</div>
-          <div className="sr-rating">Rating will go here</div>
+        </div>
+        <div className="rii-col-2">
+          <Link
+          className="rii-name"
+            to={linkPath}>
+            {name}
+          </Link>
+          <div className="rii-row-1">
+            City: {city}
+          </div>
+          <div className="rii-row-2">
+            State: {state}
+          </div>
+          <div className="rii-row-3">
+            Price: {price}
+          </div>
+          <div className="rii-row-4">
+            <Link
+              className="btn-index-reservation"
+              to={linkPath}>
+              Make a Reservation
+            </Link>
+          </div>
+          {/* <div className="rii-price">Price will go here</div>
+          <div className="rii-rating">Rating will go here</div> */}
         </div>
       </li>
     )

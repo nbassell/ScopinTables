@@ -95,11 +95,17 @@ class RestaurantSearch extends React.Component {
           { this.searchBanner() }
         </div>
         <div className="search-container">
-          <div className="header-res">Reservation bar goes here
-            <div className="res-date"></div>
-            <div className="res-time"></div>
-            <div className="res-people"></div>
-          </div>
+          {/* <div className="header-res">Reservation bar goes here
+            <div className="res-date">
+              
+            </div>
+            <div className="res-time">
+
+            </div>
+            <div className="res-people">
+
+            </div>
+          </div> */}
           <form className="search-form" autoComplete="off" onSubmit={this.handleSubmit}>
             <div className="autocomplete">
               <div className="autocomplete-form">

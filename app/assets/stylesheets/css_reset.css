@@ -31,3 +31,6 @@ button {
   appearance: none;
 }
 
+ul {
+  list-style: none;
+}

@@ -5,5 +5,6 @@ import reservation from './reservation_errors_reducer';
 
 export default combineReducers({
   session,
+  // restaurant,
   reservation,
 });

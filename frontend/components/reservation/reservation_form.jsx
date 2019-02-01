@@ -71,22 +71,24 @@ class ReservationForm extends React.Component {
   timeOptions() {
     const { opening_time, closing_time } = this.props.restaurant;
     const openingHour = new Date("01/01/2000 " + opening_time).getHours();
-    const closingHour = new Date("01/01/2000 " + closing_time).getHours();
-
+    let closingHour = new Date("01/01/2000 " + closing_time).getHours();
+    if (closingHour === 0) closingHour = 24;
+    
     let times = [];
     for (let i = openingHour; i < closingHour; i++) {
       let hourString = i > 12 ? (i - 12).toString() : i.toString();
-
+      
       for (let j = 0; j <= 45; j += 30) {
+        // if (i === 24) 
+        if (i === closingHour - 1) break;
         let timeString = hourString + ":";
         timeString += j === 0 ? "00" : j.toString();
         timeString += i >= 12 ? " PM" : " AM";
         times.push(timeString);
-
-        if (i === closingHour - 1) break;
+        
+        
       }
     }
-
     return times.map(time => {
       return (
         <option key={time} value={time}>{time}</option>
@@ -97,10 +99,10 @@ class ReservationForm extends React.Component {
   tableSizeOptions() {
     let tables = [];
 
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 20; i++) {
       tables.push(
         <option key={i} value={i}>
-          {i === 1 ? i + " person" : i + " people"}
+          {"For " + i }
         </option>
       )
     }

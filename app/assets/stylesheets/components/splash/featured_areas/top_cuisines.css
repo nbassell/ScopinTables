@@ -10,6 +10,19 @@
   justify-content: center;
 }
 
+div [class^="top-cuisines-photo-"] {
+  height: 208px;
+  width: 208px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
 .top-cuisines-header {
   margin-left: -55px;
   margin-top: 75px;
@@ -24,15 +37,6 @@
   border-top: 1px solid #d8d9db;
 }
 
-.top-cuisines-photo-container {
-  background: linear-gradient(rgba(47, 45, 65, 0.7), rgba(47, 45, 65, 0.7));
-  height: 208px;
-  width: 208px;
-  position: relative;
-  margin-top: 30px;
-  margin-left: 20px;
-}
-
 .top-cuisines-photo {
   border-radius: 4px;
   /* z-index: -1; */
@@ -41,8 +45,23 @@
 .top-cuisines-text {
   top: 50%;
   left: 50%;
-  color: #fff;
+  color: #b8222d;
   font-size: 18px;
   position: absolute;
   transform: translate(-50%, -50%);
 }
+
+.darken {
+  position: relative;
+}
+/* 
+.darken:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.3);
+} */

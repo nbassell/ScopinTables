@@ -37,13 +37,15 @@
   background-color: #fff;
   margin: 0;
   color: #666;
-  border: 10px solid #fff;
-  padding-left: 15px;
-  height: 32px;
-  line-height: 32px;
+  /* border: 10px solid #fff; */
+  border: 1px solid #fff;
+  padding: 8px 30px;
+  line-height: inherit;
 }
 
 .search-dropdown a:hover p:hover {
   color: #fff;
   background-color: #da3743;
+  overflow: visible;
+  white-space: normal;
 }

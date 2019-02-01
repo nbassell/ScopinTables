@@ -5,10 +5,9 @@ class RestaurantIndex extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-
-    };
+    this.state = {};
   }
+
 
   render() {
     const restaurants = this.props.restaurants.map((restaurant) => {
@@ -17,9 +16,11 @@ class RestaurantIndex extends React.Component {
         restaurant={restaurant} />
     });
     return (
-      <ul className="sr-index">
-        {restaurants}
-      </ul>
+      <div className="restaurant-index-wrapper">
+        <ul className="restaurant-index-list">
+          {restaurants}
+        </ul>
+      </div>
     )
   }
 

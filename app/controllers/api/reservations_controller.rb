@@ -1,13 +1,13 @@
 class Api::ReservationsController < ApplicationController
 
-  before_action :require_login
+  before_action :require_logged_in
   before_action :ensure_user_authorization, only: :destroy
 
   def create
     @reservation = Reservation.new(reservation_params)
     @reservation.user = current_user
 
-    if @restaurant.save
+    if @reservation.save
       render :show
     else
       render json: @reservation.errors.full_messages, status: 422
