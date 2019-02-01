@@ -9,7 +9,7 @@ export default (oldState = [], action) => {
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_RESERVATION_ERRORS:
-      return action.errors;
+      return (action.errors);
     case RECEIVE_RESERVATION:
     case REMOVE_RESERVATION:
     case CLEAR_RESERVATION_ERRORS:

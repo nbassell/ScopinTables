@@ -9,7 +9,7 @@ class RestaurantIndexItem extends React.Component {
 
   render() {
 
-    const { id, name, city, state, price, thumbnailUrl } = this.props.restaurant;
+    const { id, name, address, city, price, thumbnailUrl } = this.props.restaurant;
     const linkPath = "restaurants/" + id;
     return (
       <li className="restaurant-index-item">
@@ -25,10 +25,10 @@ class RestaurantIndexItem extends React.Component {
             {name}
           </Link>
           <div className="rii-row-1">
-            City: {city}
+            Address: {address}
           </div>
           <div className="rii-row-2">
-            State: {state}
+            City: {city}
           </div>
           <div className="rii-row-3">
             Price: {priceConvert(price)}

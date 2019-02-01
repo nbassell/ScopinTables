@@ -17,13 +17,14 @@ class Reservation < ApplicationRecord
             presence: true
   validates :table_size, inclusion: { in: 1..20 }
   validate :upcoming_reservation
-  validate :while_restaurant_open
+  # validate :while_restaurant_open
   validate :no_user_overlap
 
   belongs_to :user
   belongs_to :restaurant
 
-  after_initialize :include_end_datetime
+  # before_validation :strip_timezone
+  before_validation :include_end_datetime
 
   def parsed_start_datetime
     start_datetime.strftime("%A, %b %-d at %-l:%M %P")

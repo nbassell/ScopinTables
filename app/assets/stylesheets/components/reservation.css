@@ -23,7 +23,7 @@
 }
 
 .reservation-form {
-  padding: 11px 30px 20px 30px;
+  padding: 11px 28px 20px 28px;
 
 }
 
@@ -61,7 +61,7 @@
 }
 
 .date {
-  font-size: 12.5px;
+  font-size: 12px;
 }
 
 .reservation-message-text {
@@ -97,4 +97,8 @@
 .reservation-submit:hover {
   background: #c2242e;
   cursor: pointer;
+}
+
+.reservation-submit:focus {
+  outline: none;
 }

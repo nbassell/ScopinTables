@@ -2,6 +2,10 @@
   background: #f7f7f7;
 }
 
+.show-overview {
+  /* display: flex; */
+}
+
 .show-page-bg-image {
   background-image: url("https://s3.amazonaws.com/scopin-tables-dev-aa/restaurant_bg.jpg");
   background-repeat:no-repeat;
@@ -38,17 +42,21 @@
   background: #fff;
   border-radius: 5px;
   border: 1px solid rgba(0,0,0,.12);
+  box-sizing: border-box;
 }
 
 
 .show-title {
+  margin-top: 47px;
+  margin-right: 32px;
   color: #2d333f;
-  width: 80%;
+  width: 95%;
   padding: 32px 16px 32px 16px;
   text-align: left;
   font-size: 48px;
   font-weight: 600;
   /* padding: 15px ; */
+  border-top: .5px solid #ccc;
   border-bottom: .5px solid #ccc;
 }
 
@@ -71,5 +79,27 @@
   width: 590px;
   margin: 10px auto;
   padding-bottom: 30px;
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid #ccc; */
+}
+
+.show-blurb.collapsed{
+  overflow: hidden;
+  height: 50px;
+}
+
+.show-blurb.expanded{
+  overflow: visible;
+  height: auto;
+}
+
+.read-more {
+  color: rgb(218, 55, 67);
+  text-decoration: none;
+  font-size: 12px;
+  height: 24px;
+  margin-left: 25px;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 12px;
+  border-style: none;
 }
