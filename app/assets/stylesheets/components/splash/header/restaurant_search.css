@@ -24,8 +24,16 @@
 #search-dropdown {
   width: 100%;
   min-height: 100px;
+  max-height: 265px;
   color: #fff;
   position: absolute;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+#search-dropdown ul {
+  box-sizing: border-box;
+  max-height: 265px;
 }
 
 .search-dropdown ul {
