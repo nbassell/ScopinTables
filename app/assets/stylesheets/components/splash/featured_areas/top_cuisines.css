@@ -45,7 +45,8 @@ div [class^="top-cuisines-photo-"] {
 .top-cuisines-text {
   top: 50%;
   left: 50%;
-  color: #b8222d;
+  color: #fff;
+  text-shadow: 2px 2px #2d333f;
   font-size: 18px;
   position: absolute;
   transform: translate(-50%, -50%);

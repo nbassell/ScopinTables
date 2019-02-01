@@ -58,7 +58,7 @@
 
 .rii-col-2 {
   font-size: 18px;
-  margin-top: 10px;
+  margin-top: 25px;
   height: auto;
   display: flex;
   flex: 5;
@@ -106,4 +106,8 @@
 .img-thumbnail {
   height: 100%;
   border-radius: 4px;
+}
+
+.light-dollar {
+  color: rgba(0,0,0,.12)
 }

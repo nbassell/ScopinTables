@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { priceConvert } from './restaurant_index_helper';
 
 class RestaurantIndexItem extends React.Component {
   constructor(props) {
@@ -10,7 +11,6 @@ class RestaurantIndexItem extends React.Component {
 
     const { id, name, city, state, price, thumbnailUrl } = this.props.restaurant;
     const linkPath = "restaurants/" + id;
-    debugger
     return (
       <li className="restaurant-index-item">
         <div className="rii-col-1">
@@ -31,7 +31,7 @@ class RestaurantIndexItem extends React.Component {
             State: {state}
           </div>
           <div className="rii-row-3">
-            Price: {price}
+            Price: {priceConvert(price)}
           </div>
           <div className="rii-row-4">
             <Link

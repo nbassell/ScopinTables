@@ -1,5 +1,6 @@
 import React from "react";
 import ReservationForm from '../reservation/reservation_form_container';
+import { priceConvert } from '../restaurant_index/restaurant_index_helper';
 
 class RestaurantShow extends React.Component {
   constructor(props) {
