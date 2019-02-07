@@ -14,6 +14,7 @@ import Splash from './splash/splash';
 import Footer from './main/footer';
 import { AuthRoute } from '../util/route_util';
 import Modal from './modal/modal_container';
+import Ping from './main/ping';
 
 
 const App = () => (
@@ -21,11 +22,12 @@ const App = () => (
     <Modal />
     <Navbar />
     <Switch>
-      <Route exact path="/" component={Splash} />
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <Route path="/restaurants/:id" component={RestaurantShowContainer} />
+      <AuthRoute exact path="/login" component={LoginFormContainer} />
+      <Route exact path="/ping" component={Ping} />
+      <Route exact path="/" component={Splash} />
       <Route path="/restaurant/search" component={RestaurantIndexContainer} />
+      <Route path="/restaurants/:id" component={RestaurantShowContainer} />
     </Switch>
     {/* <Footer /> */}
   </div>
