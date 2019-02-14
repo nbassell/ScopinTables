@@ -11,8 +11,8 @@
 #  phone_number :string           not null
 #  price        :integer          not null
 #  capacity     :integer          not null
-#  opening_time :time             not null
-#  closing_time :time             not null
+#  opening_time :string           not null
+#  closing_time :string           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  description  :text
