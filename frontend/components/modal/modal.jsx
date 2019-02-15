@@ -1,8 +1,8 @@
 import React from 'react';
 import LoginFormContainer from "../session_form/login_form_container";
 import SignupFormContainer from "../session_form/signup_form_container";
-import CreateReviewForm from './'
-import EditReviewForm from './'
+import CreateReviewForm from '../review_form/create_review_container';
+import EditReviewForm from '../review_form/edit_review_container';
 
 
 export default ({ modal, closeModal }) => {
