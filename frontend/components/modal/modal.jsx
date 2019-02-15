@@ -1,6 +1,9 @@
 import React from 'react';
 import LoginFormContainer from "../session_form/login_form_container";
 import SignupFormContainer from "../session_form/signup_form_container";
+import CreateReviewForm from './'
+import EditReviewForm from './'
+
 
 export default ({ modal, closeModal }) => {
   if (!modal) {
@@ -14,6 +17,10 @@ export default ({ modal, closeModal }) => {
     case 'signup':
       component = <SignupFormContainer />;
       break;
+    case 'create review':
+      component = <CreateReviewForm />
+    case 'edit review':
+      component = <EditReviewForm />;
     default:
       return null;
   }

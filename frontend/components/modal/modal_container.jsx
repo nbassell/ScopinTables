@@ -4,7 +4,8 @@ import Modal from "./modal.jsx";
 
 const mapStateToProps = state => {
   return {
-    modal: state.ui.modal,
+    modal: state.ui.modal.type,
+    reviewId: state.ui.modal.reviewId
   };
 };
 

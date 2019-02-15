@@ -47,6 +47,10 @@ class User < ApplicationRecord
     self.session_token
   end
 
+  def full_name
+    "#{f_name} #{l_name}"
+  end
+
   private
 
   def ensure_session_token
