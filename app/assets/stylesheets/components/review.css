@@ -1,0 +1,28 @@
+/* REVIEW CSS */
+
+.review-item-ratings {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.review-item-ratings li {
+    color: #da3743;
+}
+
+.review-error-text {
+  color: #c70002;
+  padding: 2px 0;
+  text-align: center;
+}
+
+.review-close-button {
+  font-size: 24px;
+  float: right;
+  color: #aaa;
+  margin-right: 8px;
+}
+
+.review-close-button:hover {
+  color: black;
+}
