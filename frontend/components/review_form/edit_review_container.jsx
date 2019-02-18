@@ -5,13 +5,12 @@ import ReviewForm from './review_form';
 
 const mapStateToProps = ({ entities, session, errors }, ownProps) => {
   const review = entities.reviews[ownProps.reviewId];
-
   return ({
     formType: 'edit',
     review,
     errors: errors.review,
     restaurant: entities.restaurants[review.restaurant_id],
-    currentUser: entities.users[session.currentUser]
+    currentUser: entities.users[session.id]
   });
 };
 

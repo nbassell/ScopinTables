@@ -1,5 +1,5 @@
 class Api::ReviewsController < ApplicationController
-  before_action :require_login
+  before_action :require_logged_in
   before_action :ensure_user_authorization, only: [:update, :destroy]
   
   def create
@@ -37,7 +37,7 @@ class Api::ReviewsController < ApplicationController
   private
   def review_params
     params.require(:review).permit(:restaurant_id, :overall_rating, :food_rating,
-      :service rating, :ambience_rating, :value_rating, :body, :recommended)
+      :service_rating, :ambience_rating, :value_rating, :body, :recommended)
   end
 
   def ensure_user_authorization

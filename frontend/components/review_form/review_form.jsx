@@ -88,7 +88,7 @@ export default class ReviewForm extends React.Component {
     if (errors.length === 0) {
       return null;
     } else {
-      const errorLis = errors.map((error, i) => (
+      const errorLis = errors.map((error, idx) => (
         <li className="review-error-text" key={idx}>{error}</li>
       ));
       
@@ -102,7 +102,7 @@ export default class ReviewForm extends React.Component {
 
   ratingStars(ratingType) {
     let stars = [];
-    for (let i = 1; i < 5; i++) {
+    for (let i = 1; i <= 5; i++) {
       let colorThreshold = this.state.hovering == ratingType ?
         this.state.hoverValue : this.state[ratingType];
       let status = (i <= colorThreshold) ? "full-star" : "";
@@ -168,7 +168,6 @@ export default class ReviewForm extends React.Component {
               value={ this.state.body }
               onChange={this.updateField('body')}
             />
-            { this.recommendationCheckbox() }
           </div>
 
           <input type="submit" value="Submit Review" className="review-submit"/>

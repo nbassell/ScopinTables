@@ -9,7 +9,7 @@ const mapStateToProps = ({ entities, session, errors }, ownProps) => {
     formType: 'create',
     errors: errors.review,
     restaurant: entities.restaurants[ownProps.match.params.id],
-    currentUser: entities.users[session.currentUser]
+    currentUser: entities.users[session.id]
   });
 };
 

@@ -9,7 +9,7 @@ export const RECEIVE_DETAILED_USER = 'RECEIVE_DETAILED_USER';
 const receiveCurrentUser = ({ user, favorites }) => ({
   type: RECEIVE_CURRENT_USER,
   user,
-  favorites
+  // favorites
 });
 
 const logoutCurrentUser = () => ({
@@ -54,7 +54,6 @@ export const logout = () => dispatch => (
 );
 
 export const receiveDetailedUser = ({ user, restaurants, reservations, reviews, favorites }) => {
-  debugger
   return ({
     type: RECEIVE_DETAILED_USER,
     user,

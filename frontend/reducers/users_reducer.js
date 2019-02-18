@@ -6,7 +6,6 @@ const usersReducer = (oldState = {}, action) => {
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
     case RECEIVE_DETAILED_USER:
-    debugger
       return merge({}, oldState, { [action.user.id]: action.user });
     case LOGOUT_CURRENT_USER:
       return {};

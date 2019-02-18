@@ -95,7 +95,8 @@ class RestaurantSearch extends React.Component {
           { this.searchBanner() }
         </div>
         <div className="search-container">
-          {/* <div className="header-res">Reservation bar goes here
+          {/* <div className="header-res"
+          >Reservation bar goes here
             <div className="res-date">
               
             </div>

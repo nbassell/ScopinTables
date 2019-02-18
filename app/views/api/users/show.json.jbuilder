@@ -1,4 +1,6 @@
-json.partial! "api/users/user", user: @user
+json.user do
+  json.partial! "api/users/user", user: @user
+end
 
 json.reservations do
   @user.reservations.each do |reservation|
@@ -7,7 +9,7 @@ json.reservations do
     end
   end
 
-  json.reservation_ids @user.reservations.order(:start_datetime).map(&:id)
+  # json.reservation_ids @user.reservations.order(:start_datetime).map(&:id)
 end
 
 json.reviews do
@@ -17,7 +19,7 @@ json.reviews do
     end
   end
 
-  json.review_ids @user.reviews.map(&:id)
+  # json.review_ids @user.reviews.map(&:id)
 end
 
 # json.favorites @user.favorites.map(&:restaurant_id)

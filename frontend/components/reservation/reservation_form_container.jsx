@@ -9,9 +9,10 @@ import { openModal } from '../../actions/modal_actions';
 import ReservationForm from './reservation_form';
 
 const mapStateToProps = ({ entities, session, errors, ui }, { match }) => {
+  debugger
   return ({
     restaurant: entities.restaurants[match.params.id],
-    currentUser: session.id,
+    currentUser: entities.users[session.id],
     errors: errors.reservation,
     confirmation: ui.reservation.confirmation,
   });
