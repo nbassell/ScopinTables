@@ -25,7 +25,17 @@ class Restaurant < ApplicationRecord
   validates :zipcode, format: { with: /\d{5}/, message: "must be 5 digits" }
   validates :price, inclusion: { in: 1..5 }
 
+  has_many :reservations, dependent: :destroy
+  has_many :reservees, through: :reservations, source: :user
+  
+  has_many :reviews, dependent: :destroy
+  has_many :reviewers, through: :reviews, source: :user
+
+  # has_many :favorites, dependent: :destroy
+  # has_many :favoritees, through: :favorites, source: :user
+  
   # has_many :cuisines, through: :restaurant_cuisines, source: cuisine
+
 
   def self.pre_search
     Restaurant.select('id, name')
@@ -38,12 +48,51 @@ class Restaurant < ApplicationRecord
     )
   end
   
-  # def opening_time_before_closing_time
-  #   unless opening_time && closing_time && opening_time < closing_time
-  #     errors[:opening] << "time must be before closing time."
+  def opening_time_before_closing_time
+    unless opening_time && closing_time && opening_time < closing_time
+      errors[:opening] << "time must be before closing time."
+    end
+  end
+
+  def parsed_phone_number
+    num = phone_number
+    "(#{num[0..2]}) #{num[3..5]}-#{num[6..9]}"
+  end
+
+  # def parsed_time(arg_time)
+  #   time = arg_time.to_s[11..18]
+  #   first_two = time[0..1]
+  #   if first_two.to_i > 12
+  #     time = (first_two.to_i - 12).to_s + time[2...-3] + " PM"
+  #   elsif first_two.to_i == 12
+  #     time = time[0...-3] + " PM"
+  #   elsif first_two.to_i < 10
+  #     time = time[1...-3] + " AM"
+  #   else
+  #     time = time[0...-3] + " AM"
+  #   end
+  #   time
   # end
 
+  def overall_rating
+    self.reviews.any? ? self.reviews.average(:overall_rating).round(1) : 0
+  end
 
+  def food_rating
+    self.reviews.any? ? self.reviews.average(:food_rating).round(1) : 0
+  end
+
+  def ambience_rating
+    self.reviews.any? ? self.reviews.average(:ambience_rating).round(1) : 0
+  end
+
+  def service_rating
+    self.reviews.any? ? self.reviews.average(:service_rating).round(1) : 0
+  end
+
+  def value_rating
+    self.reviews.any? ? self.reviews.average(:value_rating).round(1) : 0
+  end
 
 
 

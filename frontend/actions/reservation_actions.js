@@ -12,7 +12,6 @@ export const createReservation = reservation => dispatch => {
     dispatch(receiveReservationConfirmation());
     dispatch(receiveReservation(newRes));
   }, err => {
-    debugger
     dispatch(receiveReservationErrors(err.responseJSON));
   });
 };

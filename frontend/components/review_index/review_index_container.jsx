@@ -8,7 +8,7 @@ const mapStateToProps = ({ entities, session, ui }, { match }) => {
   return ({
     restaurant: entities.restaurants[match.params.id],
     reviews: entities.reviews,
-    currentUserId: session.currentUser,
+    currentUserId: session.id,
     reviewConfirmation: ui.review.confirmation
   });
 };

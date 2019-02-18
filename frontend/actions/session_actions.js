@@ -6,9 +6,10 @@ export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 export const CLEAR_SESSION_ERRORS = 'CLEAR_SESSION_ERRORS';
 export const RECEIVE_DETAILED_USER = 'RECEIVE_DETAILED_USER';
 
-const receiveCurrentUser = currentUser => ({
+const receiveCurrentUser = ({ user, favorites }) => ({
   type: RECEIVE_CURRENT_USER,
-  currentUser
+  user,
+  favorites
 });
 
 const logoutCurrentUser = () => ({
@@ -45,7 +46,7 @@ export const login = user => dispatch => (
 );
 
 export const logout = () => dispatch => (
-  APIUtil.logout().then(user => (
+  APIUtil.logout().then(() => (
     dispatch(logoutCurrentUser())
   ), err => (
     dispatch(receiveSessionErrors(err.responseJSON))
@@ -53,6 +54,7 @@ export const logout = () => dispatch => (
 );
 
 export const receiveDetailedUser = ({ user, restaurants, reservations, reviews, favorites }) => {
+  debugger
   return ({
     type: RECEIVE_DETAILED_USER,
     user,

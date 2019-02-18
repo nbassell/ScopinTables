@@ -5,6 +5,8 @@ export default class ReviewIndex extends React.Component {
   constructor(props) {
     super(props);
     this.handleReview = this.handleReview.bind(this);
+    this.reviewSubmit = this.reviewSubmit.bind(this);
+    this.restaurant = this.props;
   }
 
   componentWillUnmount() {
@@ -14,7 +16,7 @@ export default class ReviewIndex extends React.Component {
 
   handleReview(e) {
     e.preventDefault();
-    if (!this.props.currentUser) {
+    if (!this.props.currentUserId) {
       this.props.openLogin();
     } else {
       const { reviews, currentUserId } = this.props;
@@ -32,7 +34,8 @@ export default class ReviewIndex extends React.Component {
 
   reviewSubmit() {
     const { reviews, currentUserId } = this.props;
-
+    // debugger
+    if (reviews.review_ids === undefined) return null;
     const buttonText = reviews.review_ids.some(id => {
       return currentUserId === reviews[id].user_id;
     }) ? "Edit Review" : "Write a Review";
@@ -54,8 +57,19 @@ export default class ReviewIndex extends React.Component {
     }
   }
 
+  averageReview() {
+    <ul className="average-review">
+      <li>{`Overall: ${ this.restaurant.overall_rating }` }</li>
+      <li>{`Food: ${ this.restaurant.food_rating }` }</li>
+      <li>{`Value: ${ this.restaurant.value_rating }` }</li>
+      <li>{`Service: ${ this.restaurant.service_rating }` }</li>
+      <li>{`Ambience: ${ this.restaurant.ambience_rating }` }</li>
+  </ul>
+  }
+
   reviewItems() {
     const { reviews, currentUserId, deleteReview } = this.props;
+    if (reviews.review_ids === undefined) return null;
     return reviews.review_ids.map(id => (
       <ReviewIndexItem id={id } key={ id }
       review = { reviews[id] }
@@ -65,14 +79,15 @@ export default class ReviewIndex extends React.Component {
   }
 
   render() {
-    const { restaurant } = this.props;
+    // const { restaurant } = this.props;
 
     return (
       <div className="review-master">
         <header>
-          <h3 className = "review-master-banner"></h3>
+          <h3 className = "review-master-banner">What People Are Saying</h3>
           { this.reviewConfirmation() }
           { this.reviewSubmit() }
+          { this.averageReview() }
         </header>
         <ul className="reviews-container">
           { this.reviewItems() }

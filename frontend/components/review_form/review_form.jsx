@@ -14,7 +14,7 @@ export default class ReviewForm extends React.Component {
   }
 
   initialState() {
-    if (this.props.formType === 'create') {
+    if (this.props.formType === "create") {
       return {
         overall_rating: 0,
         food_rating: 0,
@@ -118,7 +118,7 @@ export default class ReviewForm extends React.Component {
 
   render() {
     const { restaurant, currentUser } = this.props;
-
+    debugger
     return (
       <div className="review-form-container">
         <button onClick={this.props.closeModal}
@@ -126,7 +126,7 @@ export default class ReviewForm extends React.Component {
         <form className="review-form" onSubmit={ this.handleSubmit }>
 
           <h3 className="review-header">
-            { `${currentUser.fname}, how was your dining experience at ${restaurant.name}?` }
+            { `${currentUser.f_name}, how was your dining experience at ${restaurant.name}?` }
           </h3>
           { this.errorMessages() }
           <div className="ratings-container">

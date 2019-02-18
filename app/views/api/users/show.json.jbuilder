@@ -19,3 +19,5 @@ json.reviews do
 
   json.review_ids @user.reviews.map(&:id)
 end
+
+# json.favorites @user.favorites.map(&:restaurant_id)

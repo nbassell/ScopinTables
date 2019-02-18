@@ -12,9 +12,12 @@ Restaurant.destroy_all
 # Reservation.destroy_all
 # Review.destroy_all
 
+# Demo User
 User.create!(email: "demo_user@demo.com", f_name: "Demo", l_name: "User",
              password: "starwars", primary_dining_location: "NYC")
 
+
+# Restaurants
 Restaurant.create!(name: "Blue Fin", address: "1567 Broadway", city: "New York",
                    state: "NY", zipcode: "10036", phone_number: "2129181400",
                    price: "3", capacity: "150", opening_time: "07:00", closing_time: "23:30",
@@ -83,3 +86,8 @@ Restaurant.create!(name: "ilili", address: "236 Fifth Avenue", city: "New York",
                    price: "3", capacity: "65", opening_time: "12:00", closing_time: "23:30",
                    description: "Tradition meets sophistication at ilili, New York City's premier contemporary Lebanese restaurant offering inspired Mediterranean cuisine. ilili's menu mixes authentic dishes with modern Mediterranean influences to create a culinary journey for the palate and senses. Complimenting the international cuisine, ilili offers an impressive wine list that includes wines from all over the world and features favorites from Lebanon and the Mediterranean.
                    The restaurant's decor echoes the diverse menu, combining the architectural richness of Old Lebanon with an attitude and style that is unmistakeably New York. A DJ sets the mood with music from around the globe and soft, amber lighting punctuated by candles create a sexy, sophisticated atmosphere in which to enjoy a relaxed meal. The cuisine, decor and ambiance come together to create a new world for your senses to explore, whispering gently in your ear, ilili.")
+
+
+# Reviews
+
+Review.create!()

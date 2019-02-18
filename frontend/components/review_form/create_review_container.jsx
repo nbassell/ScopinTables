@@ -4,8 +4,9 @@ import { closeModal } from '../../actions/modal_actions';
 import ReviewForm from './review_form';
 
 const mapStateToProps = ({ entities, session, errors }, ownProps) => {
+  debugger
   return ({
-    formtype: 'create',
+    formType: 'create',
     errors: errors.review,
     restaurant: entities.restaurants[ownProps.match.params.id],
     currentUser: entities.users[session.currentUser]

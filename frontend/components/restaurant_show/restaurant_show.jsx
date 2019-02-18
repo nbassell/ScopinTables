@@ -1,6 +1,8 @@
 import React from "react";
 import ReservationForm from '../reservation/reservation_form_container';
 import { priceConvert } from '../restaurant_index/restaurant_index_helper';
+import ReviewIndex from '../review_index/review_index_container';
+// import ReviewForm from '../review_form/create_review_container';
 
 class RestaurantShow extends React.Component {
   constructor(props) {
@@ -12,7 +14,7 @@ class RestaurantShow extends React.Component {
 
   componentDidMount() {
 
-    this.props.fetchRestaurant(this.props.match.params.id);
+    this.props.fetchRestaurant();
     window.scrollTo(0, 0);
   }
   
@@ -36,6 +38,7 @@ class RestaurantShow extends React.Component {
     const { restaurant } = this.props;
     const { expanded } = this.state;
     const toggledClass = expanded ? 'expanded' : 'collapsed';
+
     return (
       <div className="show-page-main">
         <div className="show-overview">
@@ -58,12 +61,13 @@ class RestaurantShow extends React.Component {
             </button>
           }
         </div>
+        <ReviewIndex />
       </div>
     );
   }
 
   render() {
-    const { restaurant } = this.props;
+    const { restaurant, errors } = this.props;
     if (!restaurant) {
        return null};
     return (

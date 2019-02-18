@@ -5,11 +5,11 @@ export const RECEIVE_RESTAURANTS = 'RECEIVE_RESTAURANTS';
 export const RECEIVE_RESTAURANT = 'RECEIVE_RESTAURANT';
 export const RECEIVE_RESTAURANT_ERRORS = 'RECEIVE_RESTAURANT_ERRORS';
 
-export const receiveRestaurant = restaurant => {
+export const receiveRestaurant = ({ restaurant, reviews }) => {
   return ({
     type: RECEIVE_RESTAURANT,
     restaurant,
-    // reviews
+    reviews
   });
 };
 

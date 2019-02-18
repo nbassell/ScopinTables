@@ -7,7 +7,7 @@ const mapStateToProps = ({ entities, session, errors }, ownProps) => {
   const review = entities.reviews[ownProps.reviewId];
 
   return ({
-    formtype: 'edit',
+    formType: 'edit',
     review,
     errors: errors.review,
     restaurant: entities.restaurants[review.restaurant_id],
