@@ -118,7 +118,6 @@ export default class ReviewForm extends React.Component {
 
   render() {
     const { restaurant, currentUser } = this.props;
-    debugger
     return (
       <div className="review-form-container">
         <button onClick={this.props.closeModal}

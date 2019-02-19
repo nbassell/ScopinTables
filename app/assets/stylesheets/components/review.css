@@ -1,13 +1,83 @@
 /* REVIEW CSS */
 
+.review-item-container {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid rgb(216, 217, 219);
+  border-radius: 5px;
+  display: flex;
+}
+
 .review-item-ratings {
   display: flex;
-  justify-content: space-between;
-  padding: 10px 30px;
+  align-items: left;
+  padding: 10px 0;
+  font-weight: 600;
 }
 
 .review-item-ratings li {
-    color: #da3743;
+    color: #333;
+}
+
+.review-item-ratings span {
+  color: #da3743;
+  margin: 0 3px 4px;
+}
+
+.review-details {
+  width: 100%;
+  display: flex;
+  align-items: left;
+  font-size: 15px;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.review-stars {
+  display: block;
+  margin: 5px 0;
+  /* display: flex; */
+}
+
+.review-response {
+  overflow: hidden;
+  line-height: 1.2em;
+  height: 3.6em;
+  font-size: 14px;
+  /* padding: 5px; */
+  /* margin-left: 30px; */
+  color: #505050;
+}
+
+.review-response.collapsed{
+  overflow: hidden;
+  height: 45px;
+}
+
+.review-response.expanded{
+  overflow: visible;
+  height: auto;
+}
+
+.review-footer {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: solid 1px rgb(216, 217, 219);
+}
+
+.footer-icon {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.read-more {
+  color: rgb(218, 55, 67);
+  text-decoration: none;
+  font-size: 12.5px;
+  height: 24px;
 }
 
 .review-error-text {
