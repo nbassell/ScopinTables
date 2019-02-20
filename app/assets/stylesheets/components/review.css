@@ -46,12 +46,12 @@
   font-size: 14px;
   /* padding: 5px; */
   /* margin-left: 30px; */
-  color: #505050;
+  color: #2d333f;
 }
 
 .review-response.collapsed{
   overflow: hidden;
-  height: 45px;
+  height: 48px;
 }
 
 .review-response.expanded{
@@ -65,7 +65,7 @@
   font-size: 12px;
   align-items: center;
   padding-bottom: 10px;
-  border-bottom: solid 1px rgb(216, 217, 219);
+  /* border-bottom: solid 1px rgb(216, 217, 219); */
 }
 
 .footer-icon {
@@ -78,6 +78,12 @@
   text-decoration: none;
   font-size: 12.5px;
   height: 24px;
+}
+
+
+.review-confirmation {
+  color: #c70002;
+  font-weight: 500;
 }
 
 .review-error-text {

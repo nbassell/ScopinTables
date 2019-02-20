@@ -1,5 +1,6 @@
 import React from 'react';
 import ReviewIndexItem from './review_index_item';
+import { FaRegEdit } from 'react-icons/fa';
 
 export default class ReviewIndex extends React.Component {
   constructor(props) {
@@ -35,14 +36,19 @@ export default class ReviewIndex extends React.Component {
   reviewSubmit() {
     const { reviews, currentUserId } = this.props;
     if (reviews.review_ids === undefined) return null;
+
     const buttonText = reviews.review_ids.some(id => {
       return currentUserId === reviews[id].user_id;
     }) ? "Edit Review" : "Write a Review";
 
     return (
-      <button className="submit-review" onClick={this.handleReview}>
-        {buttonText}
-      </button>
+      <div>
+        Enjoyed this restaurant? 
+        <button className="submit-review" onClick={this.handleReview}>
+          <FaRegEdit size={22} />
+          {buttonText}
+        </button>
+      </div>
     )
   }
 
@@ -85,7 +91,9 @@ export default class ReviewIndex extends React.Component {
         <header>
           <h3 className="review-master-banner">What People Are Saying</h3>
           {this.reviewConfirmation()}
-          {this.reviewSubmit()}
+          <div className="review-button">
+            {this.reviewSubmit()}
+          </div>
           {this.averageReview()}
         </header>
         <ul className="reviews-container">

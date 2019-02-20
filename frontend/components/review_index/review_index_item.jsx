@@ -79,12 +79,12 @@ class ReviewIndexItem extends Component {
                 <FaRegTrashAlt size={20} /> Delete
               </div>
             }
-            {
+            {/* {
               this.props.currentUserId !== null && this.props.currentUserId === this.props.review.user_id &&
               <div className="footer-icon" onClick={this.props.editReview}>
                 <FaRegEdit size={20} /> Edit
               </div>
-            }
+            } */}
           </div>
         </div>
       </div>

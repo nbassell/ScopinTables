@@ -1,20 +1,30 @@
 .review-master {
-  width: 590px;
+  width: 608px;
   margin: 30px auto;
 }
 
 .review-master header {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: baseline;
 }
 
 .review-master-banner{
+  width: 100%;
   font-size: 23px;
   margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d8d9db;
 }
 
 .submit-review {
-  color: #237b98;
-  font-size: 18px;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 14px;
+  align-items: center;
+  color: #404040;
+  background-color: transparent;
+  border: none;
+  text-decoration-color:rgb(64, 64, 64);
 }

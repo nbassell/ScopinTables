@@ -36,6 +36,7 @@ ul {
 }
 
 button:focus,
-input:focus {
+input:focus,
+textarea:focus {
   outline: none;
 }
