@@ -42,7 +42,6 @@ class ReviewIndexItem extends Component {
     const { review } = this.props;
     const { expanded } = this.state;
     const toggledClass = expanded ? 'expanded' : 'collapsed';
-    debugger
     return (
       <div className="review-item-container">
         <div className="review-item-sidebar">

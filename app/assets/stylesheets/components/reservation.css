@@ -55,6 +55,16 @@
   width:45%;
 }
 
+.date::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.date::-webkit-clear-button {
+  display: none;
+  -webkit-appearance: none;
+}
+
 .half-container {
   display: flex;
   justify-content: space-between;

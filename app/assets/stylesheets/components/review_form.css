@@ -83,10 +83,14 @@
 }
 
 .review-close-button {
-  font-size: 24px;
+  font-size: 28px;
   float: right;
   color: #aaa;
+  margin-top: 6px;
   margin-right: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  border: none;
 }
 
 .review-close-button:hover {

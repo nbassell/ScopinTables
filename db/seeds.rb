@@ -96,7 +96,6 @@ Restaurant.create!(name: "ilili", address: "236 Fifth Avenue", city: "New York",
 
 
 # Reviews
-debugger
 Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Blue Fin"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
                 body: "It was expensive for two people but it was well worth it")
