@@ -29,7 +29,7 @@ const App = () => (
       <Route path="/restaurant/search" component={RestaurantIndexContainer} />
       <Route path="/restaurants/:id" component={RestaurantShowContainer} />
     </Switch>
-    {/* <Footer /> */}
+    <Footer />
   </div>
 );
 
