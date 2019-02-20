@@ -1,3 +1,4 @@
+require 'byebug'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -9,11 +10,17 @@
 User.destroy_all
 Restaurant.destroy_all
 # Cuisine.destroy_all
-# Reservation.destroy_all
-# Review.destroy_all
+Reservation.destroy_all
+Review.destroy_all
 
 # Demo User
 User.create!(email: "demo_user@demo.com", f_name: "Demo", l_name: "User",
+             password: "starwars", primary_dining_location: "NYC")
+
+User.create!(email: "david@gmail", f_name: "David", l_name: "Ro",
+             password: "starwars", primary_dining_location: "NYC")
+
+User.create!(email: "agron@gmail", f_name: "Agron", l_name: "Velovic",
              password: "starwars", primary_dining_location: "NYC")
 
 
@@ -89,5 +96,161 @@ Restaurant.create!(name: "ilili", address: "236 Fifth Avenue", city: "New York",
 
 
 # Reviews
+debugger
+Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Blue Fin"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "It was expensive for two people but it was well worth it")
 
-Review.create!()
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Blue Fin"), overall_rating: "5", food_rating: "4",
+                service_rating: "5", ambience_rating: "5", value_rating: "4", recommended: true,
+                body: "mixed review, the staff was truly amazing especially our server Amine, he truly is an asset to your restaurant. Every interaction w/ every server & front desk was excellent! They also were excellent on time, as we were between shows, Only complaint, was my chicken was dry as hell, I ate it regardless. The food overall is good, but not great! 
+
+                However I do recommend this place, as my dinner date enjoyed everything!")
+
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Blue Fin"), overall_rating: "3", food_rating: "3",
+                service_rating: "4", ambience_rating: "4", value_rating: "3", recommended: true,
+                body: "Overpriced and pretty bad value. Basically a tourist oriented dining facility offered in the center of Times Square. There are numerous better values for fine dining that are more resonably priced within two blocks.")
+
+Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Bobo Restaurant"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "Excellent food and ambience. The oysters were out of this world! Will definitely come back the next time I’m in NYC.")
+
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Bobo Restaurant"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "Bobo is uniquely amazing. The food is stunning, especially for the price, and the cocktail menu is one of a kind. I cannot compliment the staff highly enough for their stellar service. You need to dine here.")
+
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Bobo Restaurant"), overall_rating: "4", food_rating: "4",
+                service_rating: "5", ambience_rating: "4", value_rating: "4", recommended: true,
+                body: "We had happy hour downstairs first before going upstairs for dinner. It was WAY too loud downstairs during happy hour. We could barely hear each other. It was fine until they turned the music up and then it got so loud. Upstairs though was so lovely and so cozy. The food was good — nothing extraordinary but it was good. We had the trout almondine and the chicken with a side of fries. We were happy with the restaurant! Just a lovely little place.")
+
+Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Atlantic Grill Near Lincoln Center"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Atlantic Grill Near Lincoln Center"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Atlantic Grill Near Lincoln Center"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Morton's The Steakhouse - Midtown Manhattan"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Morton's The Steakhouse - Midtown Manhattan"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Morton's The Steakhouse - Midtown Manhattan"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Reunion"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Reunion"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Reunion"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "The Smith - Nomad"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "The Smith - Nomad"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "The Smith - Nomad"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Cafe Un Deux Trois"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Cafe Un Deux Trois"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Cafe Un Deux Trois"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Zuma Japanese Restaurant - NY"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Zuma Japanese Restaurant - NY"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Zuma Japanese Restaurant - NY"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Becco"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Becco"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Becco"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "ABC Kitchen"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "ABC Kitchen"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "ABC Kitchen"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Carmine's - 44th Street - NYC"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Carmine's - 44th Street - NYC"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Carmine's - 44th Street - NYC"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Tao Downtown"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Tao Downtown"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Tao Downtown"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "ilili"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "ilili"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
+
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "ilili"), overall_rating: "5", food_rating: "5",
+                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
+                body: "hgewohgewuoghewuoghew")
