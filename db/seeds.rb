@@ -123,132 +123,138 @@ Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_
 
 Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Atlantic Grill Near Lincoln Center"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "The perfect location near Lincoln Center. Delicious food - great variety. And a cookie treat for the performance to go!!")
 
-Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Atlantic Grill Near Lincoln Center"), overall_rating: "5", food_rating: "5",
-                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Atlantic Grill Near Lincoln Center"), overall_rating: "4", food_rating: "5",
+                service_rating: "3", ambience_rating: "3", value_rating: "4", recommended: true,
+                body: "Excellent Food. Very good professional waiter. Rest of staff a little disorganized")
 
 Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Atlantic Grill Near Lincoln Center"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "We had the most amazing waiter which made the experience so very enjoyable! He took care of our every need with great care! In addition he was friendly added humor. Food was delicious, as usual, and ambiance was very pleasant.")
 
 Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Morton's The Steakhouse - Midtown Manhattan"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "Morton’s is always amazing. They go above and beyond. They made the birthday extra special with the birthday cake. 10/10 would recommend Morton’s. It is our go to for special occasions.")
 
 Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Morton's The Steakhouse - Midtown Manhattan"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "Flawless, food quality and service were incomparable to anything else in the area.")
 
 Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Morton's The Steakhouse - Midtown Manhattan"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "Absolutely love Morton’a and this location in particular - everyone that works here is top notch and the food is always delicious")
 
 Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Reunion"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "Food is fresh, incredibly flavorful, and carefully prepared. It's obvious that the staff cares about the quality and beautiful presentation. The space is casual -- not fancy - but it works for the space. The staff was attentive but didn't rush our table of 4. I've had both brunch and dinner here, and they are both highly recommended.")
 
-Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Reunion"), overall_rating: "5", food_rating: "5",
-                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Reunion"), overall_rating: "4", food_rating: "4",
+                service_rating: "4", ambience_rating: "5", value_rating: "4", recommended: true,
+                body: "Great food and atmosphere! Already planning for the next time we will go back.")
 
 Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Reunion"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "Amazing food and even better service")
 
 Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "The Smith - Nomad"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "Amazing meal, mac n cheese was amazing, steak was amazing! Service was great as well. Will definitely come back next time we visit NYC")
 
-Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "The Smith - Nomad"), overall_rating: "5", food_rating: "5",
-                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "The Smith - Nomad"), overall_rating: "4", food_rating: "4",
+                service_rating: "4", ambience_rating: "4", value_rating: "4", recommended: true,
+                body: "Our first time at this location. We enjoyed it very much.")
 
 Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "The Smith - Nomad"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "We went on a Monday holiday for brunch, and the service was great. Not too crowded, so the noise level was fairly low. We got the avocado toast with poached eggs & the French toast - both delicious! Also nice perk: the waiter brings out house sparkling along with still (tap) water.")
 
 Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Cafe Un Deux Trois"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "Breakfast was fantastic. Great food. Great ambiance. Would definitely go back again.")
 
-Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Cafe Un Deux Trois"), overall_rating: "5", food_rating: "5",
-                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Cafe Un Deux Trois"), overall_rating: "4", food_rating: "4",
+                service_rating: "5", ambience_rating: "4", value_rating: "4", recommended: true,
+                body: "Lovely pre-theater brunch. Terrific service that was quick (waiter knew we had tickets to a matinee) but did not feel rushed. Food was delicious, particularly the onion soup and the profiteroles. A very good option in the Times Square neighborhood.")
 
-Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Cafe Un Deux Trois"), overall_rating: "5", food_rating: "5",
-                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Cafe Un Deux Trois"), overall_rating: "2", food_rating: "2",
+                service_rating: "2", ambience_rating: "4", value_rating: "3", recommended: true,
+                body: "Wait staff needs some work with. You know it's not a Meyers restaurant by the lack of positivity and gruffness. Then the food is mediocre at best! But of course none of this matters because the location keeps it open for tourists and locals like me, needing to get to a theater.")
 
 Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Zuma Japanese Restaurant - NY"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "Birthday celebration for husband and Daughter. Food and service consistently excellent")
 
-Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Zuma Japanese Restaurant - NY"), overall_rating: "5", food_rating: "5",
-                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Zuma Japanese Restaurant - NY"), overall_rating: "4", food_rating: "4",
+                service_rating: "5", ambience_rating: "4", value_rating: "4", recommended: true,
+                body: "Not bad. Not worth the price but was very enjoyable and wonderful time for a date. Food was rather good but was lacking some “umph”. Waiters were nice and friendly.")
 
-Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Zuma Japanese Restaurant - NY"), overall_rating: "5", food_rating: "5",
-                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Zuma Japanese Restaurant - NY"), overall_rating: "3", food_rating: "4",
+                service_rating: "1", ambience_rating: "5", value_rating: "3", recommended: true,
+                body: "Worst service ever! 
+
+                Drinks always late we set and first round of drinks were served after 2 courses. Same for the 2nd and 3rd round. Then we had a omakase we decided to order an extra spicy tuna roll while waiting for the roll they came with our dessert we had the roll served after the dessert actually were on the table at the same time for a 450 dollars meal you expect a better service. Zuma in Miami London Mayfair and Rome as well Roka in London and Etauru in Hallandale are way way better this is. Poor service actually horrible
+                
+                ")
 
 Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Becco"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "We were in NYC for a show and Becco was convenient to the theater. We had been there years ago and it was just as good this time around. Food was excellent. Our waiter was personable and effecient. We enjoyed the whole experience. We also had a drink at the bar following our meal. As with many NYC restaurants the building is small and you tend to sit very close to other people.")
 
 Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Becco"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "In town on vacation with my teenager who loves Italian food. Thought he would enjoy Becco, and of course I was right. Pasta is amazing. Service is great. Highly recommend if in NY, treat yourself to a great dinner and experience.")
 
 Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Becco"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "The Pasta Selection was wonderful! Best Mussels we’ve ever had! Love this place! Service was top notch. Only negative is tight quarters and poor table location right by hallway, kitchen and bathroom.")
 
-Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "ABC Kitchen"), overall_rating: "5", food_rating: "5",
-                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "ABC Kitchen"), overall_rating: "1", food_rating: "1",
+                service_rating: "5", ambience_rating: "3", value_rating: "2", recommended: true,
+                body: "The food is mediocre at best. There are simply way more restaurants to choose from in New York City to waste your time at this crappy expensive restaurant. If you’re from the Midwest you will like this place. If you are in New York or LA you’ll hate it. Do not go here.")
 
 Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "ABC Kitchen"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "Absolutely lovely place! One of my faves... will definitely return ")
 
 Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "ABC Kitchen"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "Great ambience, great food. Perfect luncheon spot with NY vibe")
 
-Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Carmine's - 44th Street - NYC"), overall_rating: "5", food_rating: "5",
+Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Carmine's - 44th Street - NYC"), overall_rating: "4", food_rating: "4",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "The portions were huge and the food was great. Even my picky kids enjoyed the food")
 
-Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Carmine's - 44th Street - NYC"), overall_rating: "5", food_rating: "5",
+Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Carmine's - 44th Street - NYC"), overall_rating: "5", food_rating: "4",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "Fantastic Italian food and great atmosphere 
+                Excellent staff service 
+                Would highly recommend")
 
 Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Carmine's - 44th Street - NYC"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "Every time we visit NYC, we come to Carmine’s. It never disappoints. It’s a great gathering place with friends and especially fun when some of the folks have never had a Carmine’s experience!")
 
 Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "Tao Downtown"), overall_rating: "5", food_rating: "5",
-                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                service_rating: "5", ambience_rating: "4", value_rating: "5", recommended: true,
+                body: "Perfect birthday diner. Everything was great, when we come back to NY we will definitely eat here again!")
 
 Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "Tao Downtown"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "Unreal food, service was amazing, great atmosphere!")
 
-Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Tao Downtown"), overall_rating: "5", food_rating: "5",
-                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "Tao Downtown"), overall_rating: "3", food_rating: "2",
+                service_rating: "3", ambience_rating: "4", value_rating: "3", recommended: true,
+                body: "Honestly for the price you could do better. Food was okay, I've had better. The environment is pretty much what calls the attention. The decor is very nice.")
 
 Review.create!(user: User.first, restaurant: Restaurant.find_by(name: "ilili"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "We had both the whole chicken and the mixed roast. Super well balanced dishes with grilled vegetables and whipped garlic butter sauce. Beautiful wood and mirrored interior enhanced the festive atmosphere. Must try.")
 
 Review.create!(user: User.find_by(f_name: "David"), restaurant: Restaurant.find_by(name: "ilili"), overall_rating: "5", food_rating: "5",
                 service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+                body: "Come for sunday brunch. FOr $31 you got a cocktail, coffee, breakfast entree and a side. The shaksouka was amazing, veal bacon and lamb sausage were delicious. Waiter was attentive and friendly and let us hang for 2 hours. Can't wait to try dinner there.")
 
-Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "ilili"), overall_rating: "5", food_rating: "5",
-                service_rating: "5", ambience_rating: "5", value_rating: "5", recommended: true,
-                body: "hgewohgewuoghewuoghew")
+Review.create!(user: User.find_by(f_name: "Agron"), restaurant: Restaurant.find_by(name: "ilili"), overall_rating: "3", food_rating: "2",
+                service_rating: "3", ambience_rating: "2", value_rating: "3", recommended: true,
+                body: "Food wasn’t great- expected a lot more!")
