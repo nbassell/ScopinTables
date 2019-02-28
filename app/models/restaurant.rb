@@ -16,6 +16,7 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  description  :text
+#  cuisine      :string
 #
 
 class Restaurant < ApplicationRecord
@@ -34,16 +35,13 @@ class Restaurant < ApplicationRecord
   # has_many :favorites, dependent: :destroy
   # has_many :favoritees, through: :favorites, source: :user
   
-  # has_many :cuisines, through: :restaurant_cuisines, source: cuisine
-
-
   def self.pre_search
-    Restaurant.select('id, name')
+    Restaurant.select('id, name, cuisine')
   end
 
   def self.search(search_term)
     Restaurant.where(
-      "name ILIKE :term OR city ILIKE :term OR state ILIKE :term",
+      "name ILIKE :term OR city ILIKE :term OR state ILIKE :term OR cuisine ILIKE :term",
       term: "%#{search_term}%"
     )
   end
@@ -58,6 +56,10 @@ class Restaurant < ApplicationRecord
     num = phone_number
     "(#{num[0..2]}) #{num[3..5]}-#{num[6..9]}"
   end
+
+  # def cuisine
+  #   @cuisine = cuisine
+  # end
 
   # def parsed_time(arg_time)
   #   time = arg_time.to_s[11..18]
