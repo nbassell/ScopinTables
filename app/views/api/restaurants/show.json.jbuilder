@@ -9,15 +9,6 @@ json.partial! 'api/restaurants/restaurant', restaurant: @restaurant
   json.value_rating @restaurant.value_rating
 end
 
-# json.reviews do
-#   @restaurant.reviews.each do |review|
-#     json.set! review.id do
-#       json.extract! :user_id, :overall_rating, :food_rating, :service_rating, :ambience_rating,
-#                     :value_rating, :recommended, :body
-#     end
-#   end
-# end
-
 json.reviews do
   json.review_ids @restaurant.reviews.map(&:id)
   @restaurant.reviews.each do |review|

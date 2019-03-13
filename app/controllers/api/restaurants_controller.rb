@@ -1,11 +1,14 @@
 class Api::RestaurantsController < ApplicationController
 
   def index
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant.with_attached_photo
+    # @restaurants = Restaurant.includes(attached_photo: :blob)
   end
 
   def show
-    @restaurant = Restaurant.find(params[:id])
+    @restaurant = Restaurant
+    .with_attached_photo
+    .find(params[:id])
     if @restaurant
       render :show
     else
@@ -19,7 +22,10 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def search
-    @restaurants = Restaurant.search(params[:search_term]).order(:name)
+    @restaurants = Restaurant
+      .with_attached_photo
+      .search(params[:search_term])
+      .order(:name)
     render :index
   end
 
@@ -28,7 +34,7 @@ class Api::RestaurantsController < ApplicationController
   def restaurant_params
     params.require(:restaurant).permit(
       :name, :address, :city, :state, :zipcode, :phone_number, :description,
-      :price, :opening_time, :closing_time, :capacity)
+      :price, :opening_time, :closing_time, :capacity, :photo)
   end
   
 end

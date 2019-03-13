@@ -34,7 +34,9 @@ class Restaurant < ApplicationRecord
 
   # has_many :favorites, dependent: :destroy
   # has_many :favoritees, through: :favorites, source: :user
-  
+
+  has_one_attached :photo
+
   def self.pre_search
     Restaurant.select('id, name, cuisine')
   end
