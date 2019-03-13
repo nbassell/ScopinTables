@@ -18,7 +18,6 @@ User.create!(email: "demo_user@demo.com", f_name: "Demo", l_name: "User",
 
 User.create!(email: "david@gmail", f_name: "David", l_name: "Ro",
              password: "starwars", primary_dining_location: "NYC")
-
 User.create!(email: "agron@gmail", f_name: "Agron", l_name: "Velovic",
              password: "starwars", primary_dining_location: "NYC")
 
