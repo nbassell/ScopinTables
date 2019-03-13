@@ -115,16 +115,16 @@ r11 = Restaurant.new(name: "ABC Kitchen", address: "35 East 18th Street", city: 
                    price: "3", capacity: "30", opening_time: "17:30", closing_time: "23:00", cuisine: "Contemporary American",
                    description: "ABC Kitchen with Jean-Georges: passionately committed to offering the freshest organic and local ingredients possible.
                    ABC Kitchen presents a changing menu that is locally sourced and globally artistic in a fresh and articulate space.")
-file = EzDownload.open('THUMBNAIL_URL_GOES_HERE')
-r11.photo.attach(io: file, filename: 'BlueFin.jpg')
+file = EzDownload.open('https://s3.amazonaws.com/scopin-tables-dev-aa/ABC.jpg')
+r11.photo.attach(io: file, filename: 'ABC.jpg')
 r11.save!
 
 r12 = Restaurant.new(name: "Carmine's - 44th Street - NYC", address: "200 West 44th Street", city: "New York",
                    state: "NY", zipcode: "10036", phone_number: "2122213800",
                    price: "2", capacity: "90", opening_time: "11:00", closing_time: "23:30", cuisine: "Italian",
                    description: "Thank you for choosing Carmine's Midtown. We are located in the heart of Times Square on 44th Street between 7th & 8th Avenue. Carmine's is a family style restaurant offering exceptional value to its guests through the many dishes of Southern Italian cuisine. With 'wow-factor' sized portions and making any meal feel like an Italian American wedding feast. Platters of home-style antipasto, pasta, decadent seafood or meat entrees, and of course homemade desserts are all staples at Carmine's, meant for sharing amongst friends and family. When great food and wine are supported by friendly and knowledgeable service, the results are magic - we want every day to feel like a Sunday afternoon at Grandma's!")
-file = EzDownload.open('https://s3.amazonaws.com/scopin-tables-dev-aa/ABC.jpg')
-r12.photo.attach(io: file, filename: 'ABC.jpg')
+file = EzDownload.open('https://s3.amazonaws.com/scopin-tables-dev-aa/Carmines.jpg')
+r12.photo.attach(io: file, filename: 'Carmines.jpg')
 r12.save!
 
 r13 = Restaurant.new(name: "Tao Downtown", address: "92 Ninth Ave", city: "New York",

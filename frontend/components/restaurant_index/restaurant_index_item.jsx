@@ -9,15 +9,15 @@ class RestaurantIndexItem extends React.Component {
 
   render() {
 
-    const { id, name, address, city, price, thumbnailUrl } = this.props.restaurant;
+    const { id, name, address, city, price, photoURL } = this.props.restaurant;
     const linkPath = "/restaurants/" + id;
     return (
       <li className="restaurant-index-item">
         <div className="rii-col-1">
           <Link to={`/restaurants/${id}`} className="rii-thumbnail" >
-            <img className="img-thumbnail" src="https://s3.amazonaws.com/scopin-tables-dev-aa/test_thumbnail.jpg" alt="test_thumbnail"/>
+            <img className="img-thumbnail" src={ photoURL } alt="test_thumbnail"/>
           </Link>
-        </div>
+        </div> 
         <div className="rii-col-2">
           <Link
           className="rii-name"
