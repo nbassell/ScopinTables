@@ -40,8 +40,6 @@ class RestaurantIndexItem extends React.Component {
               Make a Reservation
             </Link>
           </div>
-          {/* <div className="rii-price">Price will go here</div>
-          <div className="rii-rating">Rating will go here</div> */}
         </div>
       </li>
     )

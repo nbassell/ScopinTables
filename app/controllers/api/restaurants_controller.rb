@@ -34,7 +34,7 @@ class Api::RestaurantsController < ApplicationController
   def restaurant_params
     params.require(:restaurant).permit(
       :name, :address, :city, :state, :zipcode, :phone_number, :description,
-      :price, :opening_time, :closing_time, :capacity, :photo)
+      :price, :opening_time, :closing_time, :capacity, :photo, :cuisine)
   end
   
 end

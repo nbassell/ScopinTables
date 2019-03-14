@@ -1,7 +1,6 @@
 
 import React from "react";
 import { connect } from 'react-redux';
-// import 
 import { Link } from "react-router-dom";
 import withRouter from 'react-router-dom';
 
@@ -87,4 +86,4 @@ class TopCuisines extends React.Component {
   }
 }
 
-export default TopCuisines;
+export default withRouter(TopCuisines);
