@@ -1,6 +1,6 @@
 import React from "react";
 import RestaurantSearch from '../restaurant_search/restaurant_search_container';
-import TopCuisines from './top_cuisines';
+import TopCuisines from './top_cuisines_container';
 
 
 class Splash extends React.Component {

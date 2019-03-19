@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:create, :update, :destroy]
     get '/restaurants_pre_search', to: 'restaurants#pre_search'
     get '/restaurant/search', to: 'restaurants#search'
+    get '/restaurant/cuisine_search', to: 'restaurants#cuisine_search'
   end
 
   root "static_pages#root"

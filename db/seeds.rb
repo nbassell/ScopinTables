@@ -26,12 +26,11 @@ User.create!(email: "agron@gmail", f_name: "Agron", l_name: "Velovic",
 r1 = Restaurant.create(name: "Blue Fin", address: "1567 Broadway", city: "New York",
                    state: "NY", zipcode: "10036", phone_number: "2129181400",
                    price: "3", capacity: "150", opening_time: "07:00", closing_time: "23:30", cuisine: "Seafood",
-                   description: "Blue Fin, a modern seafood restaurant located at W New York – Times Square, has reopened after an extensive redesign by 
+                   description: "Blue Fin, a modern seafood restaurant located at W New York – TimeTs Square, has reopened after an extensive redesign by 
                    Robert McKinley. Known for its oasis-like respite from the buzz of Times Square and top quality seafood and sushi, the new Blue Fin boasts 
                    an upscale new look that evokes the feeling of an elegant, nautical getaway. The restaurant will continue to offer fresh, modern seafood
                     and sushi to its devoted clientele of theater-goers, tourists and New York City seafood lovers alike.")
 file = EzDownload.open('https://s3.amazonaws.com/scopin-tables-dev-aa/BlueFin.jpg')
-debugger
 r1.photo.attach(io: file, filename: 'BlueFin.jpg')
 r1.save!
 

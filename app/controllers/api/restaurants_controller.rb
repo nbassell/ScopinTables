@@ -8,7 +8,7 @@ class Api::RestaurantsController < ApplicationController
   def show
     @restaurant = Restaurant
     .with_attached_photo
-    .find(params[:id])
+    .find_by(params[:id])
     if @restaurant
       render :show
     else
@@ -26,7 +26,22 @@ class Api::RestaurantsController < ApplicationController
       .with_attached_photo
       .search(params[:search_term])
       .order(:name)
-    render :index
+    unless @restaurants.empty?
+      render :index
+    else
+      render json: ["No restaurants found"], status: 404
+    end
+  end
+
+  def cuisine_search
+    debugger
+    @restaurants = Restaurant
+    .where(cuisine: params[:cuisine].capitalize)
+    unless @restaurants.empty?
+      render :index
+    else
+      render json: ["No restaurants found"], status: 404
+    end
   end
 
   private

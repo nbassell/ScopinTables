@@ -22,7 +22,7 @@ export const receiveRestaurants = restaurants => {
 
 export const receiveRestaurantErrors = errors => {
   return ({
-    type:RECEIVE_RESTAURANT_ERRORS,
+    type: RECEIVE_RESTAURANT_ERRORS,
     errors
   });
 };
@@ -45,14 +45,26 @@ export const searchRestaurants = (query) => dispatch => {
   return SearchUtil.searchRestaurants(query).then(
     payload => {
       dispatch(receiveRestaurants(payload));
-    }
-  );
+    }, err => {
+      dispatch(receiveRestaurantErrors(err.responseJSON));
+    });
 };
 
 export const preSearch = () => dispatch => {
   return SearchUtil.preSearch().then(
     payload => {
       dispatch(receiveRestaurants(payload));
-    }
-  );
+    }, err => {
+      dispatch(receiveRestaurantErrors(err.responseJSON));
+    });
+};
+
+export const cuisineSearch = (cuisine) => dispatch => {
+  return SearchUtil.cuisineSearch(cuisine).then(
+    payload => {
+      dispatch(receiveRestaurants(payload));
+    }, err => {
+      debugger
+      dispatch(receiveRestaurantErrors(err.responseJSON));
+    });
 };

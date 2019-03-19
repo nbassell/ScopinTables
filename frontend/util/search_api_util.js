@@ -12,3 +12,11 @@ export const preSearch = () => {
     url: '/api/restaurants_pre_search',
   });
 };
+
+export const cuisineSearch = (cuisine) => {
+  return $.ajax({
+    method: 'GET',
+    url: '/api/restaurant/cuisine_search',
+    data: { cuisine }
+  });
+};
