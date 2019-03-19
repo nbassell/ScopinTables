@@ -1,18 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
+import { CUISINE_OPTIONS as cuisines } from '../restaurant_index/restaurant_index_helper';
 
 class RestaurantSearch extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
     this.updateField = this.updateField.bind(this);
     this.stringIncludeKey = this.stringIncludeKey.bind(this);
     this.state = {
       search_term: '',
       isShowing: false,
     };
-    
-
   }
   
   componentDidMount() {
@@ -65,6 +66,12 @@ class RestaurantSearch extends React.Component {
     });
   }
 
+  handleClick(e) {
+    e.preventDefault();
+    this.props.cuisineSearch(e.currentTarget.id)
+      .then(() => this.props.history.push('/restaurants/search'));
+  }
+
   searchBanner() {
     if (this.props.location.pathname !== "/") {
       return null;
@@ -79,16 +86,33 @@ class RestaurantSearch extends React.Component {
 
     const showing = this.state.isShowing ? "show" : "";
 
-    const matches = this.props.restaurants.filter((restaurant) => {
+    // const strings = 
+
+    const nameMatches = this.props.restaurants.filter((restaurant) => {
       return (this.state.search_term === '' || this.stringIncludeKey(restaurant.name, this.state.search_term));
     });
-    const restNames = matches.map((restaurant, idx) => {
-      return  (
-        <Link to={`/restaurant/show/${restaurant.id}`} key={idx}>
-          <p>{restaurant.name}</p>
+
+    const cuisineNames = cuisines.map((cuisine) => {
+      if (this.state.search_term === '' || this.stringIncludeKey(cuisine, this.state.search_term)) {
+        return (<li
+          onClick={ this.handleClick }
+          key={ cuisine }
+          id={ cuisine }>
+          { cuisine }
+        </li>)
+      }
+    });
+
+    const restNames = nameMatches.map((restaurant, idx) => {
+      return (
+        <Link to={`/restaurant/show/${ restaurant.id }`} key={idx}>
+          <p>{ restaurant.name }</p>
         </Link>
       )
-    })  
+    })
+
+    console.log(cuisines);
+
     return (
       <div className="picker-form">
         <div className="header-banner">
@@ -120,7 +144,8 @@ class RestaurantSearch extends React.Component {
                 </div>
                 <div id="search-dropdown" className={`search-dropdown ${showing}`}>
                   <ul>
-                    {restNames}
+                    { restNames }
+                    { cuisineNames }
                   </ul>
                 </div>
               </div>
@@ -133,4 +158,4 @@ class RestaurantSearch extends React.Component {
   }
 }
 
-export default RestaurantSearch;
+export default withRouter(RestaurantSearch);

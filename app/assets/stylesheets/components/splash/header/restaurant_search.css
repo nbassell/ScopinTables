@@ -43,7 +43,8 @@
   margin: 0;
 }
 
-.search-dropdown a p {
+.search-dropdown a p,
+.search-dropdown li {
   background-color: #fff;
   margin: 0;
   color: #666;
@@ -53,7 +54,9 @@
   line-height: inherit;
 }
 
-.search-dropdown a:hover p:hover {
+.search-dropdown a:hover p:hover,
+.search-dropdown li:hover {
+  cursor: pointer;
   color: #fff;
   background-color: #da3743;
   overflow: visible;

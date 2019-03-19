@@ -111,7 +111,7 @@ r10.save!
 
 r11 = Restaurant.new(name: "ABC Kitchen", address: "35 East 18th Street", city: "New York",
                    state: "NY", zipcode: "10003", phone_number: "2124755829",
-                   price: "3", capacity: "30", opening_time: "17:30", closing_time: "23:00", cuisine: "Contemporary american",
+                   price: "3", capacity: "30", opening_time: "17:30", closing_time: "23:00", cuisine: "Contemporary American",
                    description: "ABC Kitchen with Jean-Georges: passionately committed to offering the freshest organic and local ingredients possible.
                    ABC Kitchen presents a changing menu that is locally sourced and globally artistic in a fresh and articulate space.")
 file = EzDownload.open('https://s3.amazonaws.com/scopin-tables-dev-aa/ABC.jpg')
@@ -145,7 +145,7 @@ r14.save!
 
 r15 = Restaurant.new(name: "Gabriel Kreuther", address: "41 W. 42nd St.", city: "New York",
                    state: "NY", zipcode: "10036", phone_number: "2122575826",
-                   price: "4", capacity: "100", opening_time: "12:00", closing_time: "22:30", cuisine: "Contemporary american",
+                   price: "4", capacity: "100", opening_time: "12:00", closing_time: "22:30", cuisine: "Contemporary American",
                    description: "Gabriel Kreuther is a Relais & Chateaux and Two Star Michelin restaurant looking out onto beautiful Bryant Park in Midtown Manhattan. We offer a luxurious, upscale Contemporary-French-American & Alsatian-inspired dining experience with a distinct New York Spirit. 
                    Also known for its stunning decor, Gabriel Kreuther looks out onto NYC's vibrant Bryant Park on 42nd street & offers fine-dining in the upscale dining room (reserve here) or casual dining at the bar and lounge (walk-in or call) offering 'some of the absolute best bar food in NYC' (Grub Street).
                    
@@ -159,7 +159,7 @@ r15.save!
 
 r16 = Restaurant.new(name: "The View Restaurant", address: "1535 Broadway New York, NY ", city: "New York",
                    state: "NY", zipcode: "10036", phone_number: "2127048900",
-                   price: "3", capacity: "115", opening_time: "5:30", closing_time: "23:00", cuisine: "Contemporary american",
+                   price: "3", capacity: "115", opening_time: "5:30", closing_time: "23:00", cuisine: "Contemporary American",
                    description: "Perched atop the hotel, the View Restaurant & Lounge is New York City's only revolving rooftop restaurant. Enjoy a breathtaking 360 view from the heart of the Times Square Theatre District amid an all-encompassing dining experience. The seasonally changing 'New American Cuisine' features the best products from artisanal producers including top quality steaks, chops and seafood. 3-Course Prix-Fixe Dinner, $89.
                    Please join us for Sunday Mimosa Brunch from 10:00am - 1:00pm, $65 per person, including two mimosas for each adult guest. 
                    
