@@ -61,7 +61,7 @@ class RestaurantSearch extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.searchRestaurants(this.state).then(() => {
-      this.props.history.push('/restaurant/search');
+      this.props.history.push('/restaurants/search');
     });
   }
 
@@ -84,7 +84,7 @@ class RestaurantSearch extends React.Component {
     });
     const restNames = matches.map((restaurant, idx) => {
       return  (
-        <Link to={`/restaurants/${restaurant.id}`} key={idx}>
+        <Link to={`/restaurant/show/${restaurant.id}`} key={idx}>
           <p>{restaurant.name}</p>
         </Link>
       )

@@ -34,7 +34,6 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def cuisine_search
-    debugger
     @restaurants = Restaurant
     .where(cuisine: params[:cuisine].capitalize)
     unless @restaurants.empty?

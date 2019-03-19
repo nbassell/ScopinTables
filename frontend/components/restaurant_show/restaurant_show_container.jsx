@@ -11,9 +11,9 @@ const mapStateToProps = (state, ownProps) => {
   });
 };
 
-const mapDispatchToProps = (dispatch, { match }) => {
+const mapDispatchToProps = dispatch => {
   return ({
-    fetchRestaurant: () => dispatch(fetchRestaurant(match.params.id)),
+    fetchRestaurant: (id) => dispatch(fetchRestaurant(id)),
   });
 };
 

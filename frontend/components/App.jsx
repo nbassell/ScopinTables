@@ -26,8 +26,8 @@ const App = () => (
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <Route exact path="/ping" component={Ping} />
       <Route exact path="/" component={Splash} />
-      <Route path="/restaurant/search" component={RestaurantIndexContainer} />
-      <Route path="/restaurants/:id" component={RestaurantShowContainer} />
+      <Route path="/restaurants/search" component={RestaurantIndexContainer} />
+      <Route path="/restaurant/show/:id" component={RestaurantShowContainer} />
     </Switch>
     <Footer />
   </div>

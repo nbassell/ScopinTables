@@ -64,7 +64,6 @@ export const cuisineSearch = (cuisine) => dispatch => {
     payload => {
       dispatch(receiveRestaurants(payload));
     }, err => {
-      debugger
       dispatch(receiveRestaurantErrors(err.responseJSON));
     });
 };
