@@ -35,6 +35,7 @@ export const fetchRestaurants = () => dispatch => {
 export const fetchRestaurant = (id) => dispatch => {
   return APIUtil.fetchRestaurant(id).then(
     restaurant => {
+      debugger
       dispatch(receiveRestaurant(restaurant))
     }, err => {
       dispatch(receiveRestaurantErrors(err.responseJSON));

@@ -8,7 +8,7 @@ class Api::RestaurantsController < ApplicationController
   def show
     @restaurant = Restaurant
     .with_attached_photo
-    .find_by(params[:id])
+    .find(params[:id])
     if @restaurant
       render :show
     else
