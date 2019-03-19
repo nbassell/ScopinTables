@@ -32,9 +32,10 @@
 
 .rii-name {
   color: #247f9e;
-  font-size: 1.075rem;
+  font-size: 1.375rem;
   font-weight: 600;
   cursor: pointer;
+  margin-bottom: 3px;
 }
 
 .rii-name:hover {
@@ -57,8 +58,8 @@
 }
 
 .rii-col-2 {
-  font-size: 18px;
-  margin-top: 25px;
+  font-size: 17px;
+  margin-top: 13px;
   height: auto;
   display: flex;
   flex: 5;
@@ -70,19 +71,7 @@
   line-height: 25px;
 }
 
-.rii-row-1 {
-  
-}
-
-.rii-row-2 {
-
-}
-
-.rii-row-3 {
-
-}
-
-.rii-row-4 {
+.rii-row-5 {
   margin-top: 6px;
 }
 

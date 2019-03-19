@@ -8,8 +8,7 @@ class RestaurantIndexItem extends React.Component {
   }
 
   render() {
-
-    const { id, name, address, city, price, photoURL } = this.props.restaurant;
+    const { id, name, address, city, price, cuisine, photoURL } = this.props.restaurant;
     const linkPath = "/restaurant/show/" + id;
     return (
       <li className="restaurant-index-item">
@@ -21,22 +20,25 @@ class RestaurantIndexItem extends React.Component {
         <div className="rii-col-2">
           <Link
           className="rii-name"
-            to={linkPath}>
-            {name}
+            to={ linkPath }>
+            { name }
           </Link>
           <div className="rii-row-1">
-            Address: {address}
+            { cuisine }
           </div>
           <div className="rii-row-2">
-            City: {city}
+            Address: { address }
           </div>
           <div className="rii-row-3">
-            Price: {priceConvert(price)}
+            City: { city }
           </div>
           <div className="rii-row-4">
+            Price: { priceConvert(price) }
+          </div>
+          <div className="rii-row-5">
             <Link
               className="btn-index-reservation"
-              to={linkPath}>
+              to={ linkPath }>
               Make a Reservation
             </Link>
           </div>

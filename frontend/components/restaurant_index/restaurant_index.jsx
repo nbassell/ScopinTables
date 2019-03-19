@@ -12,8 +12,8 @@ class RestaurantIndex extends React.Component {
   render() {
     const restaurants = this.props.restaurants.map((restaurant) => {
       return <RestaurantIndexItem
-        key={restaurant.id}
-        restaurant={restaurant} />
+      key={restaurant.id}
+      restaurant={restaurant} />
     });
     return (
       <div className="restaurant-index-wrapper">
