@@ -111,8 +111,6 @@ class RestaurantSearch extends React.Component {
       )
     })
 
-    console.log(cuisines);
-
     return (
       <div className="picker-form">
         <div className="header-banner">
