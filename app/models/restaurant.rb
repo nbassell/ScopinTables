@@ -59,10 +59,6 @@ class Restaurant < ApplicationRecord
     "(#{num[0..2]}) #{num[3..5]}-#{num[6..9]}"
   end
 
-  # def cuisine
-  #   @cuisine = cuisine
-  # end
-
   # def parsed_time(arg_time)
   #   time = arg_time.to_s[11..18]
   #   first_two = time[0..1]

@@ -35,7 +35,7 @@ class Api::RestaurantsController < ApplicationController
 
   def cuisine_search
     @restaurants = Restaurant
-    .where(cuisine: params[:cuisine])
+    .where(cuisine: params[:cuisine].titleize)
     unless @restaurants.empty?
       render :index
     else

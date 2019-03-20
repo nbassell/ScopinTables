@@ -31,4 +31,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def titleize(string)
+    string.split(" ").map! { |ele| ele.capitalize }.join(" ")
+  end
+
 end
