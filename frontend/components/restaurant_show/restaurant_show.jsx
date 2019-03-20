@@ -45,6 +45,7 @@ class RestaurantShow extends React.Component {
           <h1 className="show-title">{restaurant.name}</h1>
           <div className="show-details">
             <ul className="rest-info">
+              <li>{restaurant.cuisine}</li>
               <li>Price: {priceConvert(restaurant.price)}</li>
               <li>Address: {restaurant.address}</li>
               <li>Phone #: {restaurant.phone_number}</li>

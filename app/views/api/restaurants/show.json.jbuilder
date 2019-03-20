@@ -1,7 +1,7 @@
 json.restaurant do
 json.partial! 'api/restaurants/restaurant', restaurant: @restaurant
   json.extract! @restaurant, :id, :name, :address, :city, :state, :zipcode,
-                           :price, :description, :opening_time, :closing_time
+                           :price, :description, :opening_time, :closing_time, :cuisine
   json.phone_number @restaurant.parsed_phone_number
   json.food_rating @restaurant.food_rating
   json.service_rating @restaurant.service_rating
