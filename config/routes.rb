@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :restaurants, only: [:index, :show] do
       resources :favorites, only: [:create]
-      # delete "favorites" to: "favorites#destroy"
+      delete "favorites", to: "favorites#destroy"
     end
     resources :reservations, only: [:create, :destroy]
     resources :reviews, only: [:create, :update, :destroy]

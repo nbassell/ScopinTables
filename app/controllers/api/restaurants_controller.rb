@@ -2,7 +2,11 @@ class Api::RestaurantsController < ApplicationController
 
   def index
     @restaurants = Restaurant.with_attached_photo
-    # @restaurants = Restaurant.includes(attached_photo: :blob)
+    # if @restaurants.length > 0
+    #   render :index
+    # else
+    #   render json: ["No matching restaurants found."], status: 404
+    # end
   end
 
   def show
@@ -29,7 +33,7 @@ class Api::RestaurantsController < ApplicationController
     unless @restaurants.empty?
       render :index
     else
-      render json: ["No restaurants found"], status: 404
+      render json: ["No matching restaurants found"], status: 404
     end
   end
 

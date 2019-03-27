@@ -32,8 +32,8 @@ class Restaurant < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :reviewers, through: :reviews, source: :user
 
-  # has_many :favorites, dependent: :destroy
-  # has_many :favoritees, through: :favorites, source: :user
+  has_many :favorites, dependent: :destroy
+  has_many :favoritees, through: :favorites, source: :user
 
   has_one_attached :photo
 

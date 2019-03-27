@@ -20,7 +20,7 @@ class ReviewIndexItem extends Component {
     for (let i = 1; i <= 5; i++) {
       let status = (i <= rating) ? "full-star" : "";
         stars.push(
-          <i key={ i } className="fa fa-star" id={ status } aria-hidden="true">
+          <i key={ i } className="fas fa-star" id={ status } aria-hidden="true">
         </i>);
         }
     return stars;
