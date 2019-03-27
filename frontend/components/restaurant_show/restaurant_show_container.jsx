@@ -1,6 +1,6 @@
-import React from "react";
 import { connect } from "react-redux";
 import { fetchRestaurant } from '../../actions/restaurant_actions';
+import { fetchFavorites } from '../../actions/favorite_actions';
 import RestaurantShow from "./restaurant_show";
 
 const mapStateToProps = (state, ownProps) => {
@@ -14,6 +14,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
   return ({
     fetchRestaurant: (id) => dispatch(fetchRestaurant(id)),
+    fetchFavorites: (userId) => dispatch(fetchFavorites(userId))
   });
 };
 

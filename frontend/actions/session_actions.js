@@ -64,9 +64,9 @@ export const receiveDetailedUser = ({ user, restaurants, reservations, reviews, 
   });
 };
 
-export const fetchUserProfile = id => dispatch => {
-  dispatch(loadingProfile());
-  return SessionAPIUtil.fetchUserProfile(id).then(payload => {
-    dispatch(receiveDetailedUser(payload));
-  });
-};
+// export const fetchUserProfile = id => dispatch => {
+//   dispatch(loadingProfile());
+//   return SessionAPIUtil.fetchUserProfile(id).then(payload => {
+//     dispatch(receiveDetailedUser(payload));
+//   });
+// };

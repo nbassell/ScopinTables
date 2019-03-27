@@ -14,6 +14,9 @@ class RestaurantShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchRestaurant(this.props.match.params.id);
+    if (this.props.currentUser) {
+      this.props.fetchFavorites(this.props.currentUser);
+    }
     window.scrollTo(0, 0);
   }
   
