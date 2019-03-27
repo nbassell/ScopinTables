@@ -6,13 +6,13 @@ export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 export const CLEAR_SESSION_ERRORS = 'CLEAR_SESSION_ERRORS';
 export const RECEIVE_DETAILED_USER = 'RECEIVE_DETAILED_USER';
 
-const receiveCurrentUser = ({ user, favorites }) => ({
+export const receiveCurrentUser = ({ user, favorites }) => ({
   type: RECEIVE_CURRENT_USER,
   user,
-  // favorites
+  favorites
 });
 
-const logoutCurrentUser = () => ({
+export const logoutCurrentUser = () => ({
   type: LOGOUT_CURRENT_USER,
 });
 

@@ -4,13 +4,14 @@ import users from './users_reducer';
 import restaurants from './restaurants_reducer';
 import reservations from './reservations_reducer';
 import reviews from './reviews_reducer';
+import favorites from './favorites_reducer';
 
 const entitiesReducer = combineReducers({
   users,
   restaurants,
   reservations,
   reviews,
-  // favorites,
+  favorites,
 });
 
 export default entitiesReducer;
