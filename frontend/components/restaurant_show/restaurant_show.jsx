@@ -2,7 +2,7 @@ import React from "react";
 import ReservationForm from '../reservation/reservation_form_container';
 import { priceConvert } from '../restaurant_index/restaurant_index_helper';
 import ReviewIndex from '../review_index/review_index_container';
-// import ReviewForm from '../review_form/create_review_container';
+import FavoriteButton from '../favorite/favorite_button_container';
 
 class RestaurantShow extends React.Component {
   constructor(props) {
@@ -81,6 +81,9 @@ class RestaurantShow extends React.Component {
           {this.mainContent()}
           <div className="show-page-reservation">
             <ReservationForm />
+          </div>
+          <div className="favorite-container">
+            <FavoriteButton restaurant={ restaurant }/>
           </div>
         </div>
       </div>
