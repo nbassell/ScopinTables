@@ -58,6 +58,30 @@ class RestaurantSearch extends React.Component {
     }
     return false;
   } 
+
+  // stringIncludeKey(string, key) {
+  //   let stringIdx = 0;
+  //   let keyIdx = 0;
+  //   let value = string.length === key.length ? 1 : 0;
+  //   let multiplier = 1;
+
+  //   function _stringIncludeKey() {
+  //     if (keyIdx === key.length) return value;
+  //     if (stringIdx === string.length) return value > 4 ? value : 0;
+  //     if (string[stringIdx].toLowerCase() === key[keyIdx].toLowerCase()) {
+  //       value += multiplier;
+  //       multiplier *= 2;
+  //       keyIdx++;
+  //     }
+  //     else {
+  //       multiplier = Math.floor(multiplier / 2) || 1;
+  //     }
+  //     stringIdx++;
+  //     return _stringIncludeKey();
+  //   }
+
+  //   return _stringIncludeKey();
+  // }
   
   handleSubmit(e) {
     e.preventDefault();
@@ -85,8 +109,6 @@ class RestaurantSearch extends React.Component {
   render() {
 
     const showing = this.state.isShowing ? "show" : "";
-
-    // const strings = 
 
     const nameMatches = this.props.restaurants.filter((restaurant) => {
       return (this.state.search_term === '' || this.stringIncludeKey(restaurant.name, this.state.search_term));

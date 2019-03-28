@@ -22,17 +22,17 @@ export const fetchFavorites = userId => dispatch => {
   });
 };
 
-export const receiveFavorites = ({ favorites }) => ({
+const receiveFavorites = ({ favorites }) => ({
   type: RECEIVE_FAVORITES,
   favorites
 });
 
-export const receiveFavorite = favorite => ({
+const receiveFavorite = favorite => ({
   type: RECEIVE_FAVORITE,
   favorite
 });
 
-export const removeFavorite = favorite => ({
+const removeFavorite = favorite => ({
   type: REMOVE_FAVORITE,
   favorite
 });
