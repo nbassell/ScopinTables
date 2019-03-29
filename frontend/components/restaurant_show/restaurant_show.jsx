@@ -79,10 +79,8 @@ class RestaurantShow extends React.Component {
         </div>
         <div className="show-page-and-form">
           {this.mainContent()}
-          <div className="show-page-reservation">
+          <div className="show-page-reservation-favorite">
             <ReservationForm />
-          </div>
-          <div className="favorite-container">
             <FavoriteButton restaurant={ restaurant }/>
           </div>
         </div>

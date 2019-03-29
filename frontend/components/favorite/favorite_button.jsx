@@ -10,12 +10,12 @@ class FavoriteButton extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    if (!currentUser) this.props.openLogin();
+    if (!this.props.currentUser) this.props.openLogin();
 
     if (this.props.favorites.includes(this.props.restaurant.id)) {
-        this.props.deleteFavorite();
+        this.props.deleteFavorite(this.props.restaurant.id);
     } else {
-      this.props.createFavorite();
+      this.props.createFavorite(this.props.restaurant.id);
     }
   }
 
@@ -23,15 +23,17 @@ class FavoriteButton extends React.Component {
 
   render() {
     const favoriteButton = this.props.favorites.includes(this.props.restaurant.id) ? (
-      <button onClick={ this.handleClick }>
+      <button className="favorite-button" onClick={ this.handleClick }>
         <IconContext.Provider value={{ color: "#da3743", className: "bookmark-icon" }}>
           <FaBookmark />
         </IconContext.Provider>
         Restaurant saved!
       </button>
     ) : (
-      <button onClick={ this.handleClick }>
-        <FaRegBookmark />
+      <button className="favorite-button" onClick={ this.handleClick }>
+        <IconContext.Provider value={{ className: "bookmark-icon" }}>
+          <FaRegBookmark/>
+        </IconContext.Provider>
         Save this restaurant
       </button> )
 

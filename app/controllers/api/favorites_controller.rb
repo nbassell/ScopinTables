@@ -4,6 +4,7 @@ class Api::FavoritesController < ApplicationController
 
   def index
     @favorites = Favorite.where(user_id: params[:user_id])
+    debugger
     render :index
   end
   

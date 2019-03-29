@@ -1,5 +1,5 @@
-.show-page-reservation {
-  position:relative;
+.show-page-reservation-favorite {
+  position: relative;
   top: -50px;
 }
 
@@ -9,7 +9,7 @@
   top: 0;
   border: 1px solid rgba(0, 0, 0, 0.12);
   width: 310px;
-  border-radius: 6px;
+  border-radius: 3px;
 }
 
 .reservation-header {

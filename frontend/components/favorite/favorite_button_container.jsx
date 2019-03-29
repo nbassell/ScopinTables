@@ -10,10 +10,10 @@ const mapStateToProps = ({ entities, session }) => {
   });
 };
 
-const mapDispatchToProps = ( dispatch, { restaurant }) => {
+const mapDispatchToProps = dispatch => {
   return ({
-    createFavorite: () => dispatch(createFavorite(restaurant.id)),
-    deleteFavorite: () => dispatch(deleteFavorite(restaurant.id)),
+    createFavorite: (restaurantId) => dispatch(createFavorite(restaurantId)),
+    deleteFavorite: (restaurantId) => dispatch(deleteFavorite(restaurantId)),
     openLogin: () => dispatch(openModal('login')),
   });
 };

@@ -1,0 +1,28 @@
+.favorite-button {
+  /* display: flex; */
+  width: 310px;
+  background-color: #fff;
+  margin-top: 50px;
+  position: sticky;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #d8d9db;
+  border-radius: 3px;
+  text-align: center;
+  padding: 10px;
+}
+
+.favorite-button:focus {
+  outline: none;
+}
+
+.favorite-button:hover {
+  border: 2px solid #da3743;
+  padding: calc(.75rem - 2px) calc(1rem - 2px);
+}
+
+.bookmark-icon {
+  width: 14px;
+  height: 18px;
+  font-size: 1.2em;
+}
