@@ -4,15 +4,30 @@ export const RECEIVE_FAVORITE = 'RECEIVE_FAVORITE';
 export const RECEIVE_FAVORITES = 'RECEIVE_FAVORITES';
 export const REMOVE_FAVORITE = 'REMOVE_FAVORITE';
 
+const receiveFavorites = ({ favorites }) => ({
+  type: RECEIVE_FAVORITES,
+  favorites
+});
+
+const receiveFavorite = restaurantId => ({
+  type: RECEIVE_FAVORITE,
+  restaurantId
+});
+
+const removeFavorite = restaurantId => ({
+  type: REMOVE_FAVORITE,
+  restaurantId
+});
+
 export const createFavorite = restaurantId => dispatch => {
-  return FavoriteApiUtil.createFavorite(restaurantId).then(favorite => {
-    dispatch(receiveFavorite(favorite));
+  return FavoriteApiUtil.createFavorite(restaurantId).then(() => {
+    dispatch(receiveFavorite(restaurantId));
   });
 };
 
 export const deleteFavorite = restaurantId => dispatch => {
-  return FavoriteApiUtil.deleteFavorite(restaurantId).then(favorite => {
-    dispatch(removeFavorite(favorite));
+  return FavoriteApiUtil.deleteFavorite(restaurantId).then(() => {
+    dispatch(removeFavorite(restaurantId));
   });
 };
 
@@ -21,18 +36,3 @@ export const fetchFavorites = userId => dispatch => {
     dispatch(receiveFavorites(payload));
   });
 };
-
-const receiveFavorites = ({ favorites }) => ({
-  type: RECEIVE_FAVORITES,
-  favorites
-});
-
-const receiveFavorite = favorite => ({
-  type: RECEIVE_FAVORITE,
-  favorite
-});
-
-const removeFavorite = favorite => ({
-  type: REMOVE_FAVORITE,
-  favorite
-});

@@ -2,17 +2,16 @@ class Api::FavoritesController < ApplicationController
 
   before_action :require_logged_in
 
-  def index
-    @favorites = Favorite.where(user_id: params[:user_id])
-    debugger
-    render :index
-  end
+  # def index
+  #   @favorites = Favorite.where(user_id: params[:user_id])
+  #   render :index
+  # end
   
   def create
     @favorite = Favorite.new(user: current_user, restaurant_id: params[:restaurant_id])
 
     if @favorite.save
-      render :show
+      render json: "Saved!", status: 200
     else
       render json: @favorite.errors.full_messages, status: 422
     end

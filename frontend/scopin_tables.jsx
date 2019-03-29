@@ -7,12 +7,11 @@ import { preSearch } from './actions/restaurant_actions';
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
-    debugger
     const preloadedState = {
       session: { id: window.currentUser.id },
       entities: {
         users: { [window.currentUser.id]: window.currentUser },
-        favorites: window.currentUser.favorited_restaurant_i
+        favorites: window.currentUser.favorited_restaurant_ids
       }
     };
     store = configureStore(preloadedState);
@@ -29,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   //TESTING
-  nt_i
   window.addEventListener(`hashchange`, () => {
     window.scrollTo(0, 0);
   });

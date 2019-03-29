@@ -22,4 +22,17 @@ json.reviews do
   # json.review_ids @user.reviews.map(&:id)
 end
 
-json.favorites @user.favorites.map(&:restaurant_id)
+json.favorites @user.favorites.map(&:restaurantId)
+
+# tracks show jbuilder notefloat
+# need to extract all restaurant info that will be displayed on index
+json.restaurants @user.favorites.map(&:restaurantId)
+
+@user.favorited_restaurants.each do |restaurant|
+  json.set! restaurant.id do
+    json.extract! restaurant, :id, :name, :address, :city, :state, :description, :price, :cuisine
+    if restaurant.photo.attached?
+      json.photoURL url_for(restaurant.photo)
+    end
+  end
+end

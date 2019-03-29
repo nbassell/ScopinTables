@@ -10,12 +10,13 @@ class FavoriteButton extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    if (!this.props.currentUser) this.props.openLogin();
+    const { currentUser, restaurant, favorites, createFavorite, deleteFavorite, openLogin } = this.props;
+    if (!currentUser) openLogin();
 
-    if (this.props.favorites.includes(this.props.restaurant.id)) {
-        this.props.deleteFavorite(this.props.restaurant.id);
+    if (favorites.includes(restaurant.id)) {
+        deleteFavorite(restaurant.id);
     } else {
-      this.props.createFavorite(this.props.restaurant.id);
+      createFavorite(restaurant.id);
     }
   }
 
