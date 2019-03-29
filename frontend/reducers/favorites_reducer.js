@@ -8,7 +8,8 @@ export default (state = [], action) => {
   const copyState = union([], state);
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
-      return action.user.favorite_restaurant_ids
+    debugger
+      return action.user.favorited_restaurant_ids
     case RECEIVE_FAVORITES:
     case RECEIVE_DETAILED_USER:
       return action.favorites;

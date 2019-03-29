@@ -61,12 +61,12 @@ class Greeting extends React.Component {
 
                 <div className="dropdown-user-container">
                   <div className="user-content-container">
-                    <div className="user-profile">
+                    {/* <div className="user-profile">
                       Profile Link Here
                     </div>
                     <div className="user-favorites">
                       Favorites Here
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
