@@ -11,7 +11,7 @@ class Api::FavoritesController < ApplicationController
     @favorite = Favorite.new(user: current_user, restaurant_id: params[:restaurant_id])
 
     if @favorite.save
-      render json: "Saved!", status: 200
+      render json: ["saved!"], status: 200
     else
       render json: @favorite.errors.full_messages, status: 422
     end

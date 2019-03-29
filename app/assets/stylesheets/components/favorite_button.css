@@ -1,8 +1,10 @@
 .favorite-button {
-  /* display: flex; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 310px;
   background-color: #fff;
-  margin-top: 50px;
+  margin-top: 20px;
   position: sticky;
   width: 100%;
   height: 50px;
@@ -25,4 +27,5 @@
   width: 14px;
   height: 18px;
   font-size: 1.2em;
+  margin-right: 10px;
 }

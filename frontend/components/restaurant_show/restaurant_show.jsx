@@ -80,8 +80,10 @@ class RestaurantShow extends React.Component {
         <div className="show-page-and-form">
           {this.mainContent()}
           <div className="show-page-reservation-favorite">
-            <ReservationForm />
-            <FavoriteButton restaurant={ restaurant }/>
+            <div className="sticky-show-wrapper">
+              <ReservationForm />
+              <FavoriteButton restaurant={ restaurant }/>
+            </div>
           </div>
         </div>
       </div>
