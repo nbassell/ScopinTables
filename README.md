@@ -57,4 +57,3 @@ Scopin'Tables manages errors across slices of state, allowing for precise feedba
 * Map with restaurant locations
 * Filter search result via various options
 * User profile page displaying saved restaurants and reservations
-* Showing users available reservation time slots on restaurant search
