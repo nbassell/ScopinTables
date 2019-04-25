@@ -160,7 +160,7 @@ class RestaurantSearch extends React.Component {
                         type="text"
                         onChange={this.updateField}
                         value={this.state.search_term}
-                        placeholder="Restaurant or Cuisine (try 'Seafood'!)"/>
+                        placeholder={"Restaurant or Cuisine (try \"Seafood\")"}/>
                 </div>
                 <div id="search-dropdown" className={`search-dropdown ${showing}`}>
                   <ul>
