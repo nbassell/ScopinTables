@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<Root store={store} />, root);
   
   //TESTING
-  // window.store = store;
-  // window.preSearch = preSearch;
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
+  window.store = store;
+  window.preSearch = preSearch;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
   //TESTING
   window.addEventListener(`hashchange`, () => {
     window.scrollTo(0, 0);

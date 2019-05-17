@@ -1,22 +1,63 @@
+// import React from 'react';
+// import LoginFormContainer from "../session_form/login_form_container";
+// import SignupFormContainer from "../session_form/signup_form_container";
+// import CreateReviewForm from '../review_form/create_review_container';
+// import EditReviewForm from '../review_form/edit_review_container';
+// import { Route } from 'react-router-dom';
+
+// export default ({ modal, closeModal, reviewId }) => {
+//   if (!modal) {
+//     return null;
+//   }
+//   let component;
+//   switch (modal) {
+//     case 'login':
+//       component = <LoginFormContainer formType={modal} />;
+//       break;
+//     case 'signup':
+//       component = <SignupFormContainer formType={modal} />;
+//       break;
+//     case 'create review':
+//       return (
+//         <div className="modal-background" onClick={ closeModal }>
+//           <div className="modal-child" onClick={ e => e.stopPropagation() }>
+//             <Route component={ ReviewForm } path="/restaurants/:id"/>
+//           </div>
+//         </div>
+//       );
+//     case 'edit review':
+//       component = <EditReviewForm reviewId={reviewId} />;
+//     default:
+//       return null;
+//   }
+  
+//   return (
+//     <div className="modal-background" onClick={ closeModal }>
+//       <div className="modal-child" onClick={e => e.stopPropagation()}>
+//         { component }
+//       </div>
+//     </div>
+//   );
+// }
+
 import React from 'react';
 import { Route } from 'react-router-dom';
 import LoginFormContainer from "../session_form/login_form_container";
 import SignupFormContainer from "../session_form/signup_form_container";
-import ReviewFormContainer from '../review_form/create_review_container';
-import EditReviewFormContainer from '../review_form/edit_review_container';
-import { withRouter } from 'react-router-dom';
+import ReviewForm from '../review_form/create_review_container';
+import EditReviewForm from '../review_form/edit_review_container';
 
-export default withRouter(({ modal, reviewId, closeModal, match }) => {
+export default ({ modal, reviewId, closeModal }) => {
   if (!modal) {
     return null;
   }
+
   switch(modal) {
     case "create review":
       return (
         <div className="modal-background" onClick={ closeModal }>
           <div className="modal-child" onClick={ e => e.stopPropagation() }>
-            {/* <Route component={ ReviewFormContainer } path="/restaurant/show/:id"/> */}
-            <ReviewFormContainer restaurantId ={ match.params.id }/>
+            <Route component={ ReviewForm } path="/restaurants/:id"/>
           </div>
         </div>
       );
@@ -24,7 +65,7 @@ export default withRouter(({ modal, reviewId, closeModal, match }) => {
     return (
       <div className="modal-background" onClick={ closeModal }>
         <div className="modal-child" onClick={ e => e.stopPropagation() }>
-          <EditReviewFormContainer reviewId={ reviewId }/>
+          <EditReviewForm reviewId={ reviewId }/>
         </div>
       </div>
     );
@@ -45,4 +86,4 @@ export default withRouter(({ modal, reviewId, closeModal, match }) => {
         </div>
       );
   }
-});
+};
