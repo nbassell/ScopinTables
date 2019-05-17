@@ -57,7 +57,7 @@ export default ({ modal, reviewId, closeModal }) => {
       return (
         <div className="modal-background" onClick={ closeModal }>
           <div className="modal-child" onClick={ e => e.stopPropagation() }>
-            <Route component={ ReviewForm } path="/restaurants/:id"/>
+            <Route component={ ReviewForm } path="/restaurant/show/:id"/>
           </div>
         </div>
       );
