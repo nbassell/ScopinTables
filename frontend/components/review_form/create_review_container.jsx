@@ -3,11 +3,11 @@ import { createReview, clearReviewErrors } from '../../actions/review_actions';
 import { closeModal } from '../../actions/modal_actions';
 import ReviewForm from './review_form';
 
-const mapStateToProps = ({ entities, session, errors }, ownProps) => {
+const mapStateToProps = ({ entities, session, errors, restaurantId }) => {
   return ({
     formType: 'create',
     errors: errors.review,
-    restaurant: entities.restaurants[ownProps.match.params.id],
+    restaurant: entities.restaurants[restaurantId],
     currentUser: entities.users[session.id]
   });
 };
@@ -20,4 +20,4 @@ const mapDispatchToProps = dispatch => {
   });
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ReviewForm)
+export default connect(mapStateToProps, mapDispatchToProps)(ReviewForm);
