@@ -67,25 +67,6 @@ class TopCuisines extends React.Component {
               <img className="top-cuisines-photo" src="http://cdn.otstatic.com/start-page-rush-654/6C913B35-FFD3-498C-93F0-A3E7086EBE25.jpg" alt="Steakhouse" />
             </div>
           </div>
-          {/* 
-            <div className="cuisine-item darken">
-              <div
-                onClick={ this.handleClick }
-                id="french">
-              <h1 className="top-cuisines-text">Best French Restaurants Around You</h1>
-                <img className="top-cuisines-photo" src="http://cdn.otstatic.com/start-page-rush-654/73289F47-FE6D-4B16-94EA-F24DC1FDFC26.jpg" alt="French" />
-              </div>
-            </div>
-          </div>
-            <div className="cuisine-item darken">
-              <div
-                onClick={ this.handleClick }
-                id="japanese">
-              <h1 className="top-cuisines-text">Best Japanese Restaurants Around You</h1>
-                <img className="top-cuisines-photo" src="http://cdn.otstatic.com/start-page-rush-654/73289F47-FE6D-4B16-94EA-F24DC1FDFC26.jpg" alt="Japanese" />
-              </div>
-            </div>
-          </div> */}
       </div>
     );
   }

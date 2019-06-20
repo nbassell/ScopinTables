@@ -84,7 +84,6 @@ export default class ReviewIndex extends React.Component {
   }
 
   render() {
-    // const { restaurant } = this.props;
 
     return (
       <div className="review-master">

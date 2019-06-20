@@ -80,7 +80,6 @@ class ReservationForm extends React.Component {
       let hourString = i > 12 ? (i - 12).toString() : i.toString();
       
       for (let j = 0; j <= 45; j += 30) {
-        // if (i === 24) 
         if (i === closingHour - 1) break;
         let timeString = hourString + ":";
         timeString += j === 0 ? "00" : j.toString();

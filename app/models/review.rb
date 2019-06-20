@@ -21,7 +21,6 @@ class Review < ApplicationRecord
             :ambience_rating, :value_rating, :body, presence: true
   validates :overall_rating, :food_rating, :service_rating, :ambience_rating,
             :value_rating, inclusion: { in: 1..5 }
-  # validates :recommended, inclusion: { in: [true, false] }
   validates :user_id, uniqueness: { scope: :restaurant_id,
               message: "you've already left a review for this restaurant" }
 

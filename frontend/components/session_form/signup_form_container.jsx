@@ -1,6 +1,5 @@
 import { connect } from "react-redux";
 import React from "react";
-// import { Link } from "react-router-dom";
 import {
   signup,
   receiveSessionErrors,
@@ -12,7 +11,6 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 const mapStateToProps = state => {
   return {
     errors: state.errors.session,
-    // navLink: <Link to='/signup'>Sign up</Link>
   };
 };
 
