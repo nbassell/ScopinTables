@@ -8,7 +8,6 @@
   width: 100%;
 }
 
-/*rest-search == input */
 #rest-search {
   width: 312px;
   height: 48px;
@@ -21,7 +20,6 @@
   box-shadow: none;
   text-overflow: ellipsis;
   white-space: nowrap;
-  /* clear: both; */
   vertical-align: top;
   position: relative;
 }

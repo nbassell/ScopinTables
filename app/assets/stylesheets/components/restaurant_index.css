@@ -1,7 +1,6 @@
 .restaurant-index-list {
   display: flex;;
   flex-direction: column;
-  /* justify-content: column; */
   width: 62.5%;
   box-sizing: border-box;
   position: relative;
@@ -43,7 +42,6 @@
 }
 
 .rii-col-1 {
-  /* width: 150px; */
   height: auto;
 }
 

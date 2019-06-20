@@ -2,11 +2,6 @@ class Api::RestaurantsController < ApplicationController
 
   def index
     @restaurants = Restaurant.with_attached_photo
-    # if @restaurants.length > 0
-    #   render :index
-    # else
-    #   render json: ["No matching restaurants found."], status: 404
-    # end
   end
 
   def show

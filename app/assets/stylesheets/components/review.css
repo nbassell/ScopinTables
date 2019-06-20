@@ -36,7 +36,6 @@
 .review-stars {
   display: block;
   margin: 5px 0;
-  /* display: flex; */
 }
 
 .review-response {
@@ -44,8 +43,6 @@
   line-height: 1.2em;
   height: 3.6em;
   font-size: 14px;
-  /* padding: 5px; */
-  /* margin-left: 30px; */
   color: #2d333f;
 }
 
@@ -65,7 +62,6 @@
   font-size: 12px;
   align-items: center;
   padding-bottom: 10px;
-  /* border-bottom: solid 1px rgb(216, 217, 219); */
 }
 
 .footer-icon {

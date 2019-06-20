@@ -2,10 +2,6 @@
   background: #f7f7f7;
 }
 
-.show-overview {
-  /* display: flex; */
-}
-
 .show-page-bg-image {
   background-image: url("https://s3.amazonaws.com/scopin-tables-dev-aa/restaurant_bg.jpg");
   background-repeat:no-repeat;
@@ -50,7 +46,6 @@
 .show-title {
   justify-self: center;
   margin-top: 33px;
-  /* margin-right: 32px; */
   color: #2d333f;
   width: 608px;
   padding: 32px 16px;
@@ -79,7 +74,6 @@
   width: 590px;
   margin: 10px auto;
   padding: 0 10px 15px;
-  /* border-bottom: 1px solid #ccc; */
 }
 
 .show-blurb.collapsed{
@@ -100,7 +94,6 @@
   font-size: 12px;
   height: 24px;
   margin-left: 25px;
-  /* margin-top: 10px; */
   cursor: pointer;
   background-color: transparent;
   font-size: 12px;

@@ -2,11 +2,6 @@ class Api::FavoritesController < ApplicationController
 
   before_action :require_logged_in
 
-  # def index
-  #   @favorites = Favorite.where(user_id: params[:user_id])
-  #   render :index
-  # end
-  
   def create
     @favorite = Favorite.new(user: current_user, restaurant_id: params[:restaurant_id])
 

@@ -1,6 +1,5 @@
 .greeting {
   display: flex;
-  /* font-weight: 700; */
 }
 
 .greeting-notif-wrapper {
@@ -17,7 +16,6 @@
   position: absolute;
   min-width: 75px;
   overflow: auto;
-  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
   z-index: 4;
   color: black;
   right: 0;
@@ -43,7 +41,6 @@
 }
 
 .btn-logout {
-  /* margin-top: 10px; */
   padding-top: 10px;
   background-color: transparent;
   border-color: transparent;

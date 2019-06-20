@@ -23,14 +23,12 @@
 
 #search-dropdown {
   width: 100%;
-  /* min-height: 100px; */
   max-height: 245px;
   color: #fff;
   position: absolute;
   box-sizing: border-box;
   overflow: scroll;
   overflow-x: hidden;
-  /* overflow-y: hidden; */
 }
 
 #search-dropdown ul {
@@ -48,7 +46,6 @@
   background-color: #fff;
   margin: 0;
   color: #666;
-  /* border: 10px solid #fff; */
   border: 1px solid #fff;
   padding: 8px 30px;
   line-height: inherit;
