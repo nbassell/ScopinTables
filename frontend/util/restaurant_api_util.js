@@ -20,11 +20,3 @@ export const searchRestaurants = (query) => {
     data: query
   });
 };
-
-// export const createRestaurant = (restaurant) => {
-//   return $.ajax({
-//     method: "POST",
-//     url: "/api/restaurants",
-//     data: { restaurant }
-//   });
-// };
